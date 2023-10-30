@@ -1,0 +1,140 @@
+import { ITask } from '../Itask.js'
+import { PageBuilder } from '../pageBuilder.js'
+import { Colors } from '../utils/colors.js'
+import { getRandom } from '../utils/getRandom.js'
+
+export class Task1006 implements ITask {
+	private taskNumber = 1006;
+	private taskString: string | undefined
+	private answerHTML: HTMLDivElement
+	private answers: number[]
+	private pageBuilder: PageBuilder = PageBuilder.getPageBuilder();
+
+	public constructor() {
+		//a
+		let optimalQ: number
+		const [averageCostsK] = this.getAverageCostsCurve()
+		let demandC: number, demandK: number
+		do {
+			[demandC, demandK] = this.getDemandCurve()
+			optimalQ = demandC / -(demandK - averageCostsK)
+		} while (optimalQ % 1 != 0)
+		const demandString: string = `P = ${demandC} - ${-demandK}Q`
+		const averageCostsString: string = `AC = ${averageCostsK}Q`
+
+		//b
+		let maxIncomeQ: number
+		const [marginalCostsK] = this.getMarginalCostsCurve()
+		let marginalRevenueC: number, marginalRevenueK: number
+		do {
+			[marginalRevenueC, marginalRevenueK] = this.getMarginalRevenueCurve()
+			maxIncomeQ = marginalRevenueC / (marginalCostsK - marginalRevenueK)
+		} while (maxIncomeQ % 1 != 0 || maxIncomeQ > optimalQ)
+		const marginalRevenueString: string = `MR = ${marginalRevenueC} - ${-marginalRevenueK}Q`
+		const marginalCostsString: string = `MC=${marginalCostsK}Q`
+
+		const task = `Poptávka po produkci středně velké firmy lze vyjádřit funkcí: ${demandString}, mezní příjmy jsou ${marginalRevenueString}, průměrné náklady vyjadřuje funkce ${averageCostsString} mezní náklady ${marginalCostsString}`
+
+		const optimalP = demandC + demandK * optimalQ
+		const maxIncomeP = demandC + demandK * maxIncomeQ
+
+		this.taskString = task
+		this.answerHTML = this.createAnswerDiv() as HTMLDivElement
+		this.answers = [optimalQ, optimalP, maxIncomeQ, maxIncomeP]
+	}
+
+	public createAnswerDiv() {
+		const answerDiv = this.pageBuilder.createElement('div', {
+			attributes: [{ attribute: "class", value: "answer-field" }]
+		})
+		const inputAQ = document.createElement('input')
+		inputAQ.setAttribute("type", "text")
+		inputAQ.setAttribute("id", `task-${this.taskNumber}-answer-aQ`)
+		const inputAP = document.createElement('input')
+		inputAP.setAttribute("type", "text")
+		inputAP.setAttribute("id", `task-${this.taskNumber}-answer-aP`)
+		const inputBQ = document.createElement('input')
+		inputBQ.setAttribute("type", "text")
+		inputBQ.setAttribute("id", `task-${this.taskNumber}-answer-bQ`)
+		const inputBP = document.createElement('input')
+		inputBP.setAttribute("type", "text")
+		inputBP.setAttribute("id", `task-${this.taskNumber}-answer-bP`)
+		answerDiv.innerHTML = `
+			a) Určete objem produkce a tržní cenu, při kterých bude firma realizovat pouze nirmální zisk.
+			<br>Q = ${inputAQ.outerHTML}. P = ${inputAP.outerHTML} 
+			<br>b) Určete objem produkce a tržní cenu v situaci maximalizace zisku 
+			<br>Q = ${inputBQ.outerHTML}. P = ${inputBP.outerHTML}<br>
+		`
+
+		const answerButton = document.createElement('button')
+		answerButton.setAttribute('id', `task-${this.taskNumber}-answer`)
+		answerButton.innerText = "Check"
+		answerButton.addEventListener('click', () => {
+			this.check()
+		})
+		answerDiv.appendChild(answerButton)
+		return answerDiv
+	}
+
+	private check() {
+		const inputAQ = document.getElementById(`task-${this.taskNumber}-answer-aQ`) as HTMLInputElement
+		const inputAP = document.getElementById(`task-${this.taskNumber}-answer-aP`) as HTMLInputElement
+		const inputBQ = document.getElementById(`task-${this.taskNumber}-answer-bQ`) as HTMLInputElement
+		const inputBP = document.getElementById(`task-${this.taskNumber}-answer-bP`) as HTMLInputElement
+		const [answerAQ, answerAP, answerBQ, answerBP] = this.answers
+		inputAQ.style.background = parseInt(inputAQ.value) == answerAQ ? Colors.green : Colors.red
+		inputAP.style.background = parseInt(inputAP.value) == answerAP ? Colors.green : Colors.red
+		inputBQ.style.background = parseInt(inputBQ.value) == answerBQ ? Colors.green : Colors.red
+		inputBP.style.background = parseInt(inputBP.value) == answerBP ? Colors.green : Colors.red
+	}
+
+	// private getChart() {
+	// 	const ctx = document.createElement('canvas')
+	// 	ctx.setAttribute("id", "chart-1006")
+	// 	const labels = []
+	// 	for (let i = 0; i < 1000; i++) {
+	// 		labels.push(i)
+	// 	}
+
+	// 	const data = {
+	// 		labels: labels,
+	// 		datasets: [{
+	// 			label: 'My First Dataset',
+	// 			data: [65, 59, 80, 81, 56, 55, 40],
+	// 			fill: false,
+	// 			borderColor: 'rgb(75, 192, 192)',
+	// 			tension: 0.1
+	// 		}]
+	// 	}
+
+	// }
+
+	private getDemandCurve = () => {
+		const demandC: number = getRandom(11, 100)
+		const demandK: number = getRandom(-10, -1)
+		return [demandC, demandK]
+	}
+
+	private getMarginalRevenueCurve = () => {
+		const marginalRevenueC = getRandom(5, 40)
+		const marginalRevenueK = getRandom(-10, -1)
+		return [marginalRevenueC, marginalRevenueK]
+	}
+
+	private getAverageCostsCurve = () => {
+		const averageCostsK: number = getRandom(1, 8)
+		return [averageCostsK]
+	}
+
+	private getMarginalCostsCurve = () => {
+		const marginalCostsK: number = getRandom(1, 10)
+		return [marginalCostsK]
+	}
+
+	public getTaskNumber() { return this.taskNumber }
+
+	public getTaskString() { return this.taskString }
+
+	public getTaskAnswer() { return this.answerHTML }
+
+}

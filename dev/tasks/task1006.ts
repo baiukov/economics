@@ -1,6 +1,7 @@
 import { ITask } from '../Itask.js'
 import { PageBuilder } from '../pageBuilder.js'
 import { Colors } from '../utils/colors.js'
+import { getDemandCurve } from '../utils/getDemandCurve.js'
 import { getRandom } from '../utils/getRandom.js'
 
 export class Task1006 implements ITask {
@@ -16,7 +17,7 @@ export class Task1006 implements ITask {
 		const [averageCostsK] = this.getAverageCostsCurve()
 		let demandC: number, demandK: number
 		do {
-			[demandC, demandK] = this.getDemandCurve()
+			[demandC, demandK] = getDemandCurve()
 			optimalQ = demandC / -(demandK - averageCostsK)
 		} while (optimalQ % 1 != 0)
 		const demandString: string = `P = ${demandC} - ${-demandK}Q`
@@ -86,33 +87,6 @@ export class Task1006 implements ITask {
 		inputAP.style.background = parseInt(inputAP.value) == answerAP ? Colors.green : Colors.red
 		inputBQ.style.background = parseInt(inputBQ.value) == answerBQ ? Colors.green : Colors.red
 		inputBP.style.background = parseInt(inputBP.value) == answerBP ? Colors.green : Colors.red
-	}
-
-	// private getChart() {
-	// 	const ctx = document.createElement('canvas')
-	// 	ctx.setAttribute("id", "chart-1006")
-	// 	const labels = []
-	// 	for (let i = 0; i < 1000; i++) {
-	// 		labels.push(i)
-	// 	}
-
-	// 	const data = {
-	// 		labels: labels,
-	// 		datasets: [{
-	// 			label: 'My First Dataset',
-	// 			data: [65, 59, 80, 81, 56, 55, 40],
-	// 			fill: false,
-	// 			borderColor: 'rgb(75, 192, 192)',
-	// 			tension: 0.1
-	// 		}]
-	// 	}
-
-	// }
-
-	private getDemandCurve = () => {
-		const demandC: number = getRandom(11, 100)
-		const demandK: number = getRandom(-10, -1)
-		return [demandC, demandK]
 	}
 
 	private getMarginalRevenueCurve = () => {

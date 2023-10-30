@@ -12,36 +12,43 @@ export class Task717 implements ITask {
 	private pageBuilder: PageBuilder = PageBuilder.getPageBuilder();
 
 	public constructor() {
-		//a
-		let productPrice = this.getProductPrice()
 		let productionK1: number, productionK2: number
+		let demandC: number, demandK: number
 		let capitalPrice: number
 		let labourPrice: number
 		let marginalRevenues: number[] = []
+		let marginalProducts: number[] = []
 		let totalProductions: number[] = []
 		let capitalAmount
 		let marginalProductC: number, marginalProductK: number
 		let labourPriceIndex: number
-		do {
-			[productionK1, productionK2] = getTotalProductCurve()
-			console.log(productionK1, productionK2)
-			capitalPrice = this.getCapitalPrice()
-			capitalAmount = this.getCapital();
-			[marginalProductC, marginalProductK] = [productionK1, productionK2 * 2]
-			for (let l = 0; l < 6; l++) {
-				marginalRevenues.push(marginalProductC + (marginalProductK * l))
-				totalProductions.push(productionK1 * l + (productionK2 * Math.pow(l, 2)))
-				console.log(productionK1 * l + productionK2 * l * l)
-			}
-			labourPriceIndex = getRandom(marginalRevenues.length, 0)
-			labourPrice = marginalRevenues[labourPriceIndex]
-			console.log(productPrice, marginalRevenues, labourPrice)
-		} while (false)
-		//b
+		let productPrice: number;
 
-		//c
+		[productionK1, productionK2] = getTotalProductCurve() // Q = k1*L + k2*L**2
+		capitalPrice = this.getCapitalPrice()
+		capitalAmount = this.getCapital();
+		[marginalProductC, marginalProductK] = [productionK1, productionK2 * 2] // MP = c + 2*k*L
+		for (let l = 0; l < 6; l++) {
+			marginalProducts.push(marginalProductC + (marginalProductK * l))
+			totalProductions.push(productionK1 * l + (productionK2 * Math.pow(l, 2)))
+		}
+		labourPriceIndex = getRandom(marginalRevenues.length, 0)
+		labourPrice = marginalRevenues[labourPriceIndex]
+		// do {
+		// 	productPrice = this.getProductPrice();
+		// 	[demandC, demandK] = getDemandCurve() // P = c + kQ => Q = (P - c) / k
+		// 	let prices = []
+		// 	for (let i = 0; i < totalProductions.length; i++) {
+		// 		console.log(demandC, demandK, totalProductions[i])
+
+		// 		prices.push(demandC + (demandK * totalProductions[i]))
+		// 	}
+		// 	const qByPrice = (productPrice - demandC) / demandK
+		// 	console.log(totalProductions, prices)
+		// } while (false)
+
 		const task = `
-		Cena jednotky kapitálu je 200 Kč, cena jednotky práce je 150 Kč, cena produktu je 30 Kč. Ostatní údaje obsahuje tabulka. Určete:
+		Cena jednotky kapitálu je ${capitalAmount} Kč, cena jednotky práce je ${labourPrice} Kč, cena produktu je 30 Kč. Ostatní údaje obsahuje tabulka. Určete:
 		<table>
 			<tr>
 				<td class='header'>L</td>
@@ -80,13 +87,22 @@ export class Task717 implements ITask {
 			</tr>
 		</table>
 		`
+		let question = getRandom(0, 99) < 50
 
 		this.taskString = task
-		this.answerHTML = this.createAnswerDiv() as HTMLDivElement
-		this.answers = [totalProductions[labourPriceIndex], "V krátkém období"]
+		this.answerHTML = this.createAnswerDiv(question) as HTMLDivElement
+		this.answers = [
+			question ? totalProductions[labourPriceIndex] : labourPriceIndex,
+			"V krátkém období"
+		]
+		let totalRevenues = []
+		for (let i = 0; i < 6; i++) {
+			totalRevenues.push(totalProductions[i] * 2)
+		}
+		console.log(this.answers, marginalRevenues, totalRevenues)
 	}
 
-	public createAnswerDiv() {
+	public createAnswerDiv(question: boolean) {
 		const answerDiv = this.pageBuilder.createElement('div', {
 			attributes: [{ attribute: "class", value: "answer-field" }]
 		})
@@ -97,8 +113,8 @@ export class Task717 implements ITask {
 		inputB.setAttribute("type", "text")
 		inputB.setAttribute("id", `task-${this.taskNumber}-answer-cB`)
 		answerDiv.innerHTML = `
-			a) Při jakém Q bude firma v rovnováze na trhu zboží a služeb.
-			<br>Q = ${inputAQ.outerHTML}
+			a) Při jakém ${question ? "Q" : "L"} bude firma v rovnováze na trhu zboží a služeb.
+			<br>${question ? "Q" : "L"} = ${inputAQ.outerHTML}
 			<br>b) V jakém období se nacházíme?
 			<br>${inputB.outerHTML}<br>
 		`

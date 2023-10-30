@@ -31,3 +31,19 @@ input {
 button {
 	padding: 3px;
 }
+
+table, th, td {
+  border: 1px solid;
+	text-align: center;
+}
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+td[class='header'] {
+	background-color: lightgray;
+}
+
+.task {
+	padding-bottom: 30px;
+}

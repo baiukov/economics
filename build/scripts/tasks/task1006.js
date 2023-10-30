@@ -1,33 +1,11 @@
 import { PageBuilder } from '../pageBuilder.js';
 import { Colors } from '../utils/colors.js';
+import { getDemandCurve } from '../utils/getDemandCurve.js';
 import { getRandom } from '../utils/getRandom.js';
 export class Task1006 {
     constructor() {
         this.taskNumber = 1006;
         this.pageBuilder = PageBuilder.getPageBuilder();
-        // private getChart() {
-        // 	const ctx = document.createElement('canvas')
-        // 	ctx.setAttribute("id", "chart-1006")
-        // 	const labels = []
-        // 	for (let i = 0; i < 1000; i++) {
-        // 		labels.push(i)
-        // 	}
-        // 	const data = {
-        // 		labels: labels,
-        // 		datasets: [{
-        // 			label: 'My First Dataset',
-        // 			data: [65, 59, 80, 81, 56, 55, 40],
-        // 			fill: false,
-        // 			borderColor: 'rgb(75, 192, 192)',
-        // 			tension: 0.1
-        // 		}]
-        // 	}
-        // }
-        this.getDemandCurve = () => {
-            const demandC = getRandom(11, 100);
-            const demandK = getRandom(-10, -1);
-            return [demandC, demandK];
-        };
         this.getMarginalRevenueCurve = () => {
             const marginalRevenueC = getRandom(5, 40);
             const marginalRevenueK = getRandom(-10, -1);
@@ -46,7 +24,7 @@ export class Task1006 {
         const [averageCostsK] = this.getAverageCostsCurve();
         let demandC, demandK;
         do {
-            [demandC, demandK] = this.getDemandCurve();
+            [demandC, demandK] = getDemandCurve();
             optimalQ = demandC / -(demandK - averageCostsK);
         } while (optimalQ % 1 != 0);
         const demandString = `P = ${demandC} - ${-demandK}Q`;

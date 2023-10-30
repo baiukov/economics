@@ -1,22 +1,15 @@
 import { PageBuilder } from '../pageBuilder.js';
 import { Colors } from '../utils/colors.js';
+import { getLabourPrice } from '../utils/getLabourPrice.js';
 import { getRandom } from '../utils/getRandom.js';
+import { getTotalProductCurve } from '../utils/getTotalProductCurve.js';
 export class Task718 {
     constructor() {
         this.taskNumber = 718;
         this.pageBuilder = PageBuilder.getPageBuilder();
-        this.getTotalProductCurve = () => {
-            const productionK1 = getRandom(11, 100);
-            const productionK2 = getRandom(-0.1, -10);
-            return [productionK1, productionK2];
-        };
         this.getProductPrice = () => {
             const productPrice = getRandom(1, 20);
             return productPrice;
-        };
-        this.getLabourPrice = () => {
-            const labourPrice = getRandom(21, 200);
-            return labourPrice;
         };
         this.getFixedCosts = () => {
             const fixedCosts = getRandom(100, 7000);
@@ -30,11 +23,10 @@ export class Task718 {
         let labour;
         let totalProduct;
         do {
-            [productionK1, productionK2] = this.getTotalProductCurve();
-            labourPrice = this.getLabourPrice();
+            [productionK1, productionK2] = getTotalProductCurve();
+            labourPrice = getLabourPrice();
             [marginalProductC, marginalProductK] = [productionK1, productionK2 * 2];
             let [mrpC, mrpK] = [productionK1 * productPrice, marginalProductK * productPrice];
-            console.log(`MRP = ${mrpC} - ${-mrpK}L**2`);
             labour = (mrpC - labourPrice) / -mrpK;
             // labour = ((productionK1 * productPrice) - labourPrice) / (marginalProductK * productPrice)
             totalProduct = productionK1 * labour + (productionK2 * labour * labour);
@@ -48,7 +40,6 @@ export class Task718 {
         const variableCosts = labourPrice * labour;
         const totalCosts = variableCosts + fixedCosts;
         const income = totalRevenue - totalCosts;
-        console.log(labour, totalProduct, totalRevenue, income);
         const task = `Práce je jedním variabilním výrobním faktorem. Produkční funkce firmy má tvar ${totalProductString}, kde L je množství spotřebovávané práce v hodinách za den. Všechny trhy jsou dokonale konkurenční. Výrobky se prodávají za cenu ${productPrice} Kč/ks a hodinová mzdová sazba je ${labourPrice} Kč. Firma maximalizuje zisk.`;
         this.taskString = task;
         this.answerHTML = this.createAnswerDiv(fixedCosts);

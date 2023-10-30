@@ -51,7 +51,9 @@ export class PageBuilder {
 				newElement.setAttribute(attribute.attribute, attribute.value)
 			})
 		}
+		console.log(properties.innerText)
 		newElement.innerHTML = properties.innerText ? properties.innerText : ""
+
 		return newElement
 	}
 

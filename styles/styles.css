@@ -31,3 +31,13 @@ input {
 button {
 	padding: 3px;
 }
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+
+.task {
+	padding-bottom: 30px;
+}

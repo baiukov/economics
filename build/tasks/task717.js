@@ -30,18 +30,15 @@ export class Task717 {
         let labourPriceIndex;
         do {
             [productionK1, productionK2] = getTotalProductCurve();
-            console.log(productionK1, productionK2);
             capitalPrice = this.getCapitalPrice();
             capitalAmount = this.getCapital();
             [marginalProductC, marginalProductK] = [productionK1, productionK2 * 2];
             for (let l = 0; l < 6; l++) {
                 marginalRevenues.push(marginalProductC + (marginalProductK * l));
                 totalProductions.push(productionK1 * l + (productionK2 * Math.pow(l, 2)));
-                console.log(productionK1 * l + productionK2 * l * l);
             }
             labourPriceIndex = getRandom(marginalRevenues.length, 0);
             labourPrice = marginalRevenues[labourPriceIndex];
-            console.log(productPrice, marginalRevenues, labourPrice);
         } while (false);
         //b
         //c

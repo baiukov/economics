@@ -1,51 +1,41 @@
 import { ITask } from '../Itask.js'
 import { PageBuilder } from '../pageBuilder.js'
 import { Colors } from '../utils/colors.js'
-import { getDemandCurve } from '../utils/getDemandCurve.js'
 import { getRandom } from '../utils/getRandom.js'
+import { getRandomFloat } from '../utils/getRandomFloat.js'
 
-export class Task1006 implements ITask {
-	private taskNumber = 1006;
+export class Task912 implements ITask {
+	private taskNumber = 912;
 	private taskString: string | undefined
 	private answerHTML: HTMLDivElement
-	private answers: number[]
+	private answers: number[] = []
 	private pageBuilder: PageBuilder = PageBuilder.getPageBuilder();
 
 	public constructor() {
 		//a
-		let optimalQ: number
-		const [averageCostsK] = this.getAverageCostsCurve()
+		let q: number
+		let qPC: number
+		let marginalCost: number
 		let demandC: number, demandK: number
-		do {
-			[demandC, demandK] = getDemandCurve()
-			optimalQ = demandC / -(demandK - averageCostsK)
-		} while (optimalQ % 1 != 0)
-		const demandString: string = `P = ${demandC} - ${-demandK}Q`
-		const averageCostsString: string = `AC = ${averageCostsK}Q`
-
-		//b
-		let maxIncomeQ: number
-		const [marginalCostsK] = this.getMarginalCostsCurve()
 		let marginalRevenueC: number, marginalRevenueK: number
-		let qInPerfectCompetition
 		do {
+			marginalCost = getRandom(1, 10);
+			[demandC, demandK] = [getRandom(5, 500), getRandomFloat(-0.01, -0.1)];
 			[marginalRevenueC, marginalRevenueK] = this.getMarginalRevenueCurve()
-			maxIncomeQ = marginalRevenueC / (marginalCostsK - marginalRevenueK)
-		} while (maxIncomeQ % 1 != 0 || maxIncomeQ > optimalQ || qInPerfectCompetition)
-		const marginalRevenueString: string = `MR = ${marginalRevenueC} - ${-marginalRevenueK}Q`
-		const marginalCostsString: string = `MC=${marginalCostsK}Q`
+			q = (marginalRevenueC - marginalCost) / -marginalRevenueK
+			qPC = (demandC - marginalCost) / -demandK
+		} while (q % 1 != 0 || q <= 0 || qPC % 1 != 0 || qPC <= 0 || q > qPC)
+		const price = demandC + (demandK * q)
 
-		const task = `Poptávka po produkci středně velké firmy lze vyjádřit funkcí: ${demandString}, mezní příjmy jsou ${marginalRevenueString}, průměrné náklady vyjadřuje funkce ${averageCostsString} mezní náklady ${marginalCostsString}`
-
-		const optimalP = demandC + demandK * optimalQ
-		const maxIncomeP = demandC + demandK * maxIncomeQ
-
-		this.taskString = task
-		this.answerHTML = this.createAnswerDiv() as HTMLDivElement
-		this.answers = [optimalQ, optimalP, maxIncomeQ, maxIncomeP]
+		this.taskString = `
+		Poptávková křivka po produkci monopolního výrobce ručních mixérů v daném měsíci je 
+		dána následující rovnicí : P = ${demandC} – ${-demandK}Q, mezní příjem výrobce lze popsat rovnicí: MR = 
+		${marginalRevenueC} – ${-marginalRevenueK}Q.`
+		this.answerHTML = this.createAnswerDiv(marginalCost) as HTMLDivElement
+		this.answers = [q, price, qPC, marginalCost]
 	}
 
-	public createAnswerDiv() {
+	public createAnswerDiv(marginalCost: number) {
 		const answerDiv = this.pageBuilder.createElement('div', {
 			attributes: [{ attribute: "class", value: "answer-field" }]
 		})
@@ -61,22 +51,16 @@ export class Task1006 implements ITask {
 		const inputBP = document.createElement('input')
 		inputBP.setAttribute("type", "text")
 		inputBP.setAttribute("id", `task-${this.taskNumber}-answer-bP`)
-		const inputCQ = document.createElement('input')
-		inputCQ.setAttribute("type", "text")
-		inputCQ.setAttribute("id", `task-${this.taskNumber}-answer-cQ`)
-		const inputCP = document.createElement('input')
-		inputCP.setAttribute("type", "text")
-		inputCP.setAttribute("id", `task-${this.taskNumber}-answer-cP`)
 		answerDiv.innerHTML = `
-			a) Určete objem produkce a tržní cenu, při kterých bude firma realizovat pouze nirmální zisk.
+			a) Jestliže MC výroby ručních mixérů jsou konstantní a rovny ${marginalCost} EUR, kolik 
+			mixérů vyrobí výrobce maximalizující zisk za měsíc a za jakou cenu je prodá?
 			<br>Q = ${inputAQ.outerHTML}. P = ${inputAP.outerHTML} 
-			<br>b) Určete objem produkce a tržní cenu v situaci maximalizace zisku 
+			<br>b) Jaká by byla 
+			produkce a cena mixérů, kdyby byly prodávány na dokonale konkurenčním trhu?
 			<br>Q = ${inputBQ.outerHTML}. P = ${inputBP.outerHTML}
-			<br>c) Jaká by byla produkce a cena výrobků, kdyby byly prodávány na dokonale konkurenčním trhu?
-			<br>Q = ${inputCQ.outerHTML}. P = ${inputCQ.outerHTML}
+			<br>c) Znázorněte graficky.
 			<br>
 		`
-
 		const answerButton = document.createElement('button')
 		answerButton.setAttribute('id', `task-${this.taskNumber}-answer`)
 		answerButton.innerText = "Check"
@@ -94,25 +78,15 @@ export class Task1006 implements ITask {
 		const inputBP = document.getElementById(`task-${this.taskNumber}-answer-bP`) as HTMLInputElement
 		const [answerAQ, answerAP, answerBQ, answerBP] = this.answers
 		inputAQ.style.background = parseInt(inputAQ.value) == answerAQ ? Colors.green : Colors.red
-		inputAP.style.background = parseInt(inputAP.value) == answerAP ? Colors.green : Colors.red
+		inputAP.style.background = parseFloat(inputAP.value) == answerAP ? Colors.green : Colors.red
 		inputBQ.style.background = parseInt(inputBQ.value) == answerBQ ? Colors.green : Colors.red
 		inputBP.style.background = parseInt(inputBP.value) == answerBP ? Colors.green : Colors.red
 	}
 
 	private getMarginalRevenueCurve = () => {
-		const marginalRevenueC = getRandom(5, 40)
-		const marginalRevenueK = getRandom(-10, -1)
+		const marginalRevenueC = getRandom(50, 150)
+		const marginalRevenueK = getRandomFloat(-0.3, -0.01)
 		return [marginalRevenueC, marginalRevenueK]
-	}
-
-	private getAverageCostsCurve = () => {
-		const averageCostsK: number = getRandom(1, 8)
-		return [averageCostsK]
-	}
-
-	private getMarginalCostsCurve = () => {
-		const marginalCostsK: number = getRandom(1, 10)
-		return [marginalCostsK]
 	}
 
 	public getTaskNumber() { return this.taskNumber }

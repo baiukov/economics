@@ -45,16 +45,14 @@ export class Task718 implements ITask {
 
 		const income: number = totalRevenue - totalCosts
 
-
 		const task = `Práce je jedním variabilním výrobním faktorem. Produkční funkce firmy má tvar ${totalProductString}, kde L je množství spotřebovávané práce v hodinách za den. Všechny trhy jsou dokonale konkurenční. Výrobky se prodávají za cenu ${productPrice} Kč/ks a hodinová mzdová sazba je ${labourPrice} Kč. Firma maximalizuje zisk.`
 
-
 		this.taskString = task
-		this.answerHTML = this.createAnswerDiv(fixedCosts) as HTMLDivElement
+		this.answerHTML = this.createAnswerHTML(fixedCosts) as HTMLDivElement
 		this.answers = [labour, totalProduct, totalRevenue, income]
 	}
 
-	public createAnswerDiv(fixedCosts: number) {
+	public createAnswerHTML(fixedCosts: number) {
 		const answerDiv = this.pageBuilder.createElement('div', {
 			attributes: [{ attribute: "class", value: "answer-field" }]
 		})

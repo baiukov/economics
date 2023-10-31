@@ -1,6 +1,7 @@
 import { ITask } from '../Itask.js'
 import { PageBuilder } from '../pageBuilder.js'
 import { Colors } from '../utils/colors.js'
+import { getLabourPrice } from '../utils/getLabourPrice.js'
 import { getRandom } from '../utils/getRandom.js'
 import { getTotalProductCurve } from '../utils/getTotalProductCurve.js'
 
@@ -12,43 +13,54 @@ export class Task717 implements ITask {
 	private pageBuilder: PageBuilder = PageBuilder.getPageBuilder();
 
 	public constructor() {
-		let productionK1: number, productionK2: number
-		let demandC: number, demandK: number
-		let capitalPrice: number
-		let labourPrice: number
-		let marginalRevenues: number[] = []
-		let marginalProducts: number[] = []
-		let totalProductions: number[] = []
-		let capitalAmount
-		let marginalProductC: number, marginalProductK: number
-		let labourPriceIndex: number
-		let productPrice: number;
 
-		[productionK1, productionK2] = getTotalProductCurve() // Q = k1*L + k2*L**2
-		capitalPrice = this.getCapitalPrice()
-		capitalAmount = this.getCapital();
-		[marginalProductC, marginalProductK] = [productionK1, productionK2 * 2] // MP = c + 2*k*L
-		for (let l = 0; l < 6; l++) {
-			marginalProducts.push(marginalProductC + (marginalProductK * l))
-			totalProductions.push(productionK1 * l + (productionK2 * Math.pow(l, 2)))
-		}
-		labourPriceIndex = getRandom(marginalRevenues.length, 0)
-		labourPrice = marginalRevenues[labourPriceIndex]
-		// do {
-		// 	productPrice = this.getProductPrice();
-		// 	[demandC, demandK] = getDemandCurve() // P = c + kQ => Q = (P - c) / k
-		// 	let prices = []
-		// 	for (let i = 0; i < totalProductions.length; i++) {
-		// 		console.log(demandC, demandK, totalProductions[i])
+		const productPrice = this.getProductPrice()
+		let labourPrice: number = 0
+		const capitalAmount = this.getCapital()
+		const capitalPrice = this.getCapitalPrice()
+		const labour: number[] = [0, 1, 2, 3, 4, 5]
+		const capital: number[] = []
+		const totalCosts: number[] = []
+		const totalProductions: number[] = []
+		let [productionK1, productionK2] = [0, 0]
+		let marginalCosts: number[] = []
 
-		// 		prices.push(demandC + (demandK * totalProductions[i]))
-		// 	}
-		// 	const qByPrice = (productPrice - demandC) / demandK
-		// 	console.log(totalProductions, prices)
-		// } while (false)
+
+		labour.forEach((l) => {
+			capital.push(capitalAmount)
+
+			if (l == 0) {
+				totalProductions.push(0)
+				marginalCosts.push(Infinity)
+				totalCosts.push(capitalAmount * capitalPrice)
+			} else {
+				console.log(l)
+				let marginalCost
+				let quantity = 0
+				do {
+					if (!productionK1) [productionK1, productionK2] = getTotalProductCurve()
+					labourPrice = getLabourPrice()
+					const totalCost = (capitalAmount * capitalPrice) + l * labourPrice
+					totalCosts.push(totalCost)
+					// console.log(`Q = ${productionK1}L + ${productionK2}L**2`)
+					quantity = productionK1 * l + (productionK2 * Math.pow(l, 2))
+					// console.log("Q= ", quantity)
+					const deltaQ = quantity - totalProductions[l - 1]
+					// console.log("lastQ = ", totalProductions[l - 1], deltaQ)
+					const deltaTC = totalCost - totalCosts[l - 1]
+					// console.log("lastTC = ", totalCosts[l - 1], deltaTC)
+					marginalCost = deltaQ / deltaTC
+					// console.log(deltaQ, deltaTC)
+				} while (false)
+				totalProductions.push(quantity)
+				// console.log(marginalCost)
+			}
+		})
+		const fixedCosts = capitalAmount * capitalPrice
+
 
 		const task = `
-		Cena jednotky kapitálu je ${capitalAmount} Kč, cena jednotky práce je ${labourPrice} Kč, cena produktu je 30 Kč. Ostatní údaje obsahuje tabulka. Určete:
+		Cena jednotky kapitálu je ${capitalAmount} Kč, cena jednotky práce je ${labourPrice} Kč, cena produktu je ${productPrice} Kč. Ostatní údaje obsahuje tabulka. Určete:
 		<table>
 			<tr>
 				<td class='header'>L</td>
@@ -92,14 +104,24 @@ export class Task717 implements ITask {
 		this.taskString = task
 		this.answerHTML = this.createAnswerDiv(question) as HTMLDivElement
 		this.answers = [
-			question ? totalProductions[labourPriceIndex] : labourPriceIndex,
+			question ? totalProductions[0] : 0,
 			"V krátkém období"
 		]
 		let totalRevenues = []
 		for (let i = 0; i < 6; i++) {
 			totalRevenues.push(totalProductions[i] * 2)
 		}
-		console.log(this.answers, marginalRevenues, totalRevenues)
+		console.log(this.answers, [], totalRevenues)
+	}
+
+	private checkWhile = (marginalCosts: number[]) => {
+		let result = false
+		marginalCosts.forEach((marginalCost) => {
+			if (marginalCost % 1 != 0) {
+				result = true
+			}
+		})
+		return result
 	}
 
 	public createAnswerDiv(question: boolean) {

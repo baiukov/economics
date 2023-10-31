@@ -7,7 +7,7 @@ export const topicNames = {
 	6: { name: "Náklady v krátkém období, příjmy, zisk", tasks: [] },
 	7: { name: "Dokonalá konkurence na trhu výrobků a služeb", tasks: [717, 718] },
 	8: { name: "Nedokonalá konkurence na trhu výrobků a služeb", tasks: [] },
-	9: { name: "Monopol", tasks: [] },
+	9: { name: "Monopol", tasks: [911, 912] }, //901
 	10: { name: "Monopolistic competition", tasks: [1006] },
 	11: { name: "Oligopol", tasks: [] }
 }

@@ -6,6 +6,8 @@ import { Task1006 } from './tasks/task1006.js'
 import { Task419 } from './tasks/task419.js'
 import { Task717 } from './tasks/task717.js'
 import { Task718 } from './tasks/task718.js'
+import { Task911 } from './tasks/task911.js'
+import { Task912 } from './tasks/task912.js'
 
 export class Economy {
 	private topics: Array<Topic> = [];
@@ -38,6 +40,8 @@ export class Economy {
 
 	private generateAllTasks() {
 		this.tasks[1006] = new Task1006()
+		this.tasks[911] = new Task911()
+		this.tasks[912] = new Task912()
 		this.tasks[718] = new Task718()
 		this.tasks[717] = new Task717()
 		this.tasks[419] = new Task419()

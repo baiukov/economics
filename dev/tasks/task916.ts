@@ -3,36 +3,35 @@ import { PageBuilder } from '../pageBuilder.js'
 import { alphabet } from '../utils/alphabet.js'
 import { Colors } from '../utils/colors.js'
 import { getRandom } from '../utils/getRandom.js'
-import { getRandomFloat } from '../utils/getRandomFloat.js'
+import { getRandomFloatFixed1 } from '../utils/getRandomFloatFixed1.js'
 import { shuffle } from '../utils/shuffle.js'
 
-export class Task911 implements ITask {
-	private taskNumber: number = 911;
+export class Task916 implements ITask {
+	private taskNumber: number = 916;
 	private answerHTML: HTMLDivElement | undefined
 	private taskString: string | undefined
 	private pageBuilder = PageBuilder.getPageBuilder()
 	private answers: string[] = []
 
 	public constructor() {
-		const isEqual = getRandom(0, 99) < 20
-		const isBigger = isEqual ? false : getRandom(0, 99) < 50
-
-		const marginalCost = getRandomFloat(1.1, 9.9)
-		const marginalRevenue = isEqual ? marginalCost : (isBigger ? getRandomFloat(marginalCost, 10.0) : getRandomFloat(1.0, marginalCost))
+		const isOne = getRandom(0, 99) < 20
+		const elasticity = isOne ? 1 : getRandom(0, 99) < 50 ? getRandomFloatFixed1(20, 1.1) : getRandomFloatFixed1(0.1, 0.9)
 
 		this.taskString = `
-		Monopolní firma zjistí, že na současné úrovni produkce je MR ${marginalRevenue.toFixed(1)} Kč a MC jsou ${marginalCost.toFixed(1)} Kč. Která z následujících operací bude maximalizovat zisk ?
+		Ekonomický poradce najímaný jediným plastickým chirurgem, který provádí kosmetické 
+		zákroky, tvrdí, že poptávková křivka po zákrocích je lineární. Pro běžný počet operací 
+		vykonaných ročně je hodnota koeficientu cenové elasticity poptávky ${elasticity} (v absolutní 
+		hodnotě). Předpokládejte, že jediným cílem chirurga je maximalizace zisku. Jak se má v 
+		tomto případě zachovat ?
 		<br>
 		`
 
 		const answers = [
-			"ponechat P i Q stejné",
-			"zvýšit P",
-			"zvýšit P a snížit Q",
-			"snížit P a zvýšit Q",
-			"snížit P"
+			"musí chirurg zvýšit cenu za zákrok",
+			"musí chirurg snížit cenu za zákrok",
+			"musí chirurg ponechat cenu za zákrok"
 		]
-		const correctAnswer = isEqual ? answers[0] : isBigger ? answers[3] : answers[2]
+		const correctAnswer = isOne ? answers[2] : (elasticity > 1 ? answers[0] : answers[1])
 		this.answerHTML = this.createAnswerHTML(answers, correctAnswer) as HTMLDivElement
 		let answer = []
 	}

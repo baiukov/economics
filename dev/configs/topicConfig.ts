@@ -1,4 +1,5 @@
 export const topicNames = {
+	0: { name: "<h2>Microeconomy</h2>", tasks: [] },
 	1: { name: "Úvod do studia ekonomické teorie", tasks: [] },
 	2: { name: "Trh a tržní mechanismus", tasks: [] },
 	3: { name: "Cenová elasticita poptávky", tasks: [] },
@@ -11,5 +12,7 @@ export const topicNames = {
 	10: { name: "Monopolistic competition", tasks: [1006] },
 	11: { name: "Oligopol", tasks: [] },
 
-	21: { name: "Makroeconomy", tasks: [2111, 2112] }
+	20: { name: "<h2>Makroeconomy</h2>", tasks: [] },
+	21: { name: "Úvod pro problematiky národního hospodářství", tasks: [2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111] },
+	22: { name: "Agregatní produkt", tasks: [2211, 2212] }
 }

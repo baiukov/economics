@@ -1,10 +1,14 @@
 import { ITask } from './Itask.js'
 import { Topic } from './Topic.js'
+import { testTasks } from './configs/taskTestConfig.js'
 import { topicNames } from './configs/topicConfig.js'
 import { PageBuilder } from './pageBuilder.js'
 import { Task1006 } from './tasks/task1006.js'
+import { Task2103 } from './tasks/task2103.js'
+import { Task2110 } from './tasks/task2110.js'
 import { Task2111 } from './tasks/task2111.js'
-import { Task2112 } from './tasks/task2112.js'
+import { Task2211 } from './tasks/task2121.js'
+import { Task2212 } from './tasks/task2122.js'
 import { Task419 } from './tasks/task419.js'
 import { Task717 } from './tasks/task717.js'
 import { Task718 } from './tasks/task718.js'
@@ -14,6 +18,7 @@ import { Task913 } from './tasks/task913.js'
 import { Task914 } from './tasks/task914.js'
 import { Task916 } from './tasks/task916.js'
 import { Task918 } from './tasks/task918.js'
+import { TaskTest } from './tasks/taskTest.js'
 
 export class Economy {
 	private topics: Array<Topic> = [];
@@ -23,8 +28,8 @@ export class Economy {
 
 	private constructor() {
 		// topics creation
-		this.pageBuilder = PageBuilder.getPageBuilder()
 		this.generateAllTasks()
+		this.pageBuilder = PageBuilder.getPageBuilder()
 		Object.entries(topicNames).forEach(([number, properties]) => {
 			const numberInt = parseInt(number)
 			const tasks: Array<ITask> = []
@@ -58,7 +63,18 @@ export class Economy {
 		this.tasks[717] = new Task717()
 		this.tasks[419] = new Task419()
 
+		this.tasks[2103] = new Task2103()
+
+		this.tasks[2110] = new Task2110()
 		this.tasks[2111] = new Task2111()
-		this.tasks[2112] = new Task2112()
+		this.tasks[2211] = new Task2211()
+		this.tasks[2212] = new Task2212()
+
+
+		testTasks.forEach((testTask: Record<string, any>) => {
+			const taskNumber = testTask.taskNumber
+			const task = new TaskTest(taskNumber, testTask.task, testTask.answers, testTask.correctAnswer)
+			this.tasks[taskNumber] = task
+		})
 	}
 }

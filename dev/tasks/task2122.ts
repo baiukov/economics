@@ -4,8 +4,8 @@ import { Colors } from '../utils/colors.js'
 import { getRandom } from '../utils/getRandom.js'
 import { getRandomFloatFixed1 } from '../utils/getRandomFloatFixed1.js'
 
-export class Task2112 implements ITask {
-	private taskNumber = 2112;
+export class Task2212 implements ITask {
+	private taskNumber = 2212;
 	private taskAnswer: HTMLDivElement | undefined
 	private taskString: string | undefined
 	private pageBuilder = PageBuilder.getPageBuilder()

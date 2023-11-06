@@ -45,6 +45,26 @@ td[class='header'] {
 	background-color: lightgray;
 }
 
+.nostyle-table {
+	border: none
+}
+.amount-table-GDP {
+	width: 58px;
+}
+
+.price-table-GDP {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.table-gdp-elem-width {
+	width: 150px;
+}
+
+.table-gdp-year {
+	text-align: left;
+}
+
 .task {
 	padding-bottom: 30px;
 }

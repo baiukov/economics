@@ -7,6 +7,7 @@ import { Task1006 } from './tasks/task1006.js'
 import { Task2103 } from './tasks/task2103.js'
 import { Task2110 } from './tasks/task2110.js'
 import { Task2111 } from './tasks/task2111.js'
+import { Task2112 } from './tasks/task2112.js'
 import { Task2211 } from './tasks/task2121.js'
 import { Task2212 } from './tasks/task2122.js'
 import { Task419 } from './tasks/task419.js'
@@ -69,6 +70,7 @@ export class Economy {
 		this.tasks[2111] = new Task2111()
 		this.tasks[2211] = new Task2211()
 		this.tasks[2212] = new Task2212()
+		this.tasks[2112] = new Task2112()
 
 
 		testTasks.forEach((testTask: Record<string, any>) => {

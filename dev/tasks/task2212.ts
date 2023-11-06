@@ -13,7 +13,7 @@ export class Task2212 implements ITask {
 
 	public constructor() {
 		let taxRate
-		let additionalInvestments, marginalC
+		let marginalC
 		let oldGDP, deltaGDP, newGDP
 		let government
 		let multiplicator
@@ -35,7 +35,7 @@ export class Task2212 implements ITask {
 		console.log(multiplicator, oldGDP, isRaise, newGDP)
 
 		this.taskString = `
-		Vláda ${isRaise ? "sníží" : "zvýší"} vládní nákupy statků a služeb o ${government} mld. Kč a současně ${isRaise ? "zvýší" : "sníží"} transferové platby ve stejné výši. Mezní sklon ke spotřebě je ${marginalC} a daňová sazba ${taxRate}. 
+		Vláda ${!isRaise ? "sníží" : "zvýší"} vládní nákupy statků a služeb o ${government} mld. Kč a současně ${!isRaise ? "zvýší" : "sníží"} transferové platby ve stejné výši. Mezní sklon ke spotřebě je ${marginalC} a daňová sazba ${taxRate}. 
 		`
 		this.taskAnswer = this.createAnswerDiv() as HTMLDivElement
 		this.answers = [multiplicator, newGDP]

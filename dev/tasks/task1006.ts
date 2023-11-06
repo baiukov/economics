@@ -15,17 +15,23 @@ export class Task1006 implements ITask {
 		//a
 		let optimalQ: number
 		const [averageCostsK] = this.getAverageCostsCurve()
+		let [marginalCostsK] = this.getMarginalCostsCurve()
 		let demandC: number, demandK: number
+		let pcQ: number, pcC: number
+
 		do {
+			[marginalCostsK] = this.getMarginalCostsCurve();
 			[demandC, demandK] = getDemandCurve()
 			optimalQ = demandC / -(demandK - averageCostsK)
-		} while (optimalQ % 1 != 0)
+			pcQ = (demandC / (-demandK + marginalCostsK))
+		} while (optimalQ % 1 != 0 || pcQ % 1 != 0)
+		pcC = demandC + demandK * pcQ
+		console.log("PCQ", pcQ)
 		const demandString: string = `P = ${demandC} - ${-demandK}Q`
 		const averageCostsString: string = `AC = ${averageCostsK}Q`
 
 		//b
 		let maxIncomeQ: number
-		const [marginalCostsK] = this.getMarginalCostsCurve()
 		let marginalRevenueC: number, marginalRevenueK: number
 		let qInPerfectCompetition
 		do {
@@ -42,7 +48,7 @@ export class Task1006 implements ITask {
 
 		this.taskString = task
 		this.answerHTML = this.createAnswerDiv() as HTMLDivElement
-		this.answers = [optimalQ, optimalP, maxIncomeQ, maxIncomeP]
+		this.answers = [optimalQ, optimalP, maxIncomeQ, maxIncomeP, pcQ, pcC]
 	}
 
 	public createAnswerDiv() {
@@ -73,7 +79,7 @@ export class Task1006 implements ITask {
 			<br>b) Určete objem produkce a tržní cenu v situaci maximalizace zisku 
 			<br>Q = ${inputBQ.outerHTML}. P = ${inputBP.outerHTML}
 			<br>c) Jaká by byla produkce a cena výrobků, kdyby byly prodávány na dokonale konkurenčním trhu?
-			<br>Q = ${inputCQ.outerHTML}. P = ${inputCQ.outerHTML}
+			<br>Q = ${inputCQ.outerHTML}. P = ${inputCP.outerHTML}
 			<br>
 		`
 
@@ -92,11 +98,15 @@ export class Task1006 implements ITask {
 		const inputAP = document.getElementById(`task-${this.taskNumber}-answer-aP`) as HTMLInputElement
 		const inputBQ = document.getElementById(`task-${this.taskNumber}-answer-bQ`) as HTMLInputElement
 		const inputBP = document.getElementById(`task-${this.taskNumber}-answer-bP`) as HTMLInputElement
-		const [answerAQ, answerAP, answerBQ, answerBP] = this.answers
+		const inputCQ = document.getElementById(`task-${this.taskNumber}-answer-cQ`) as HTMLInputElement
+		const inputCP = document.getElementById(`task-${this.taskNumber}-answer-cP`) as HTMLInputElement
+		const [answerAQ, answerAP, answerBQ, answerBP, answerCQ, answerCP] = this.answers
 		inputAQ.style.background = parseInt(inputAQ.value) == answerAQ ? Colors.green : Colors.red
 		inputAP.style.background = parseInt(inputAP.value) == answerAP ? Colors.green : Colors.red
 		inputBQ.style.background = parseInt(inputBQ.value) == answerBQ ? Colors.green : Colors.red
 		inputBP.style.background = parseInt(inputBP.value) == answerBP ? Colors.green : Colors.red
+		inputCQ.style.background = parseInt(inputCQ.value) == answerCQ ? Colors.green : Colors.red
+		inputCP.style.background = parseInt(inputCP.value) == answerCP ? Colors.green : Colors.red
 	}
 
 	private getMarginalRevenueCurve = () => {

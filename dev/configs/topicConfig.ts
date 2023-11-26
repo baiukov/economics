@@ -13,6 +13,7 @@ export const topicNames = {
 	11: { name: "Oligopol", tasks: [] },
 
 	20: { name: "<h2>Makroeconomy</h2>", tasks: [] },
-	21: { name: "Úvod pro problematiky národního hospodářství", tasks: [2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113] },
-	22: { name: "Agregatní produkt", tasks: [2211, 2212] }
+	21: { name: "Úvod pro problematiky národního hospodářství", tasks: [2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112] },
+	22: { name: "Agregatní produkt", tasks: [2211, 2212] },
+	23: { name: "Peníze", tasks: [2301, 2302, 2303, 2304, 2307, 2308] }
 }

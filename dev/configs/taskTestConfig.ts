@@ -103,5 +103,44 @@ export const testTasks = [
 			"nic z uvedeného neplatí"
 		],
 		correctAnswer: 0
-	}
+	},
+
+	{
+		taskNumber: 2302,
+		task: "Která z nasledujících položek patří do pasiv v účetní bilanci komerční banky?",
+		answers: [
+			"depozita",
+			"úvěry",
+			"nakoupené vládní cenné papíry",
+			"přebytečné rezervy",
+			"povinné rezervy"
+		],
+		correctAnswer: 0
+	},
+
+	{
+		taskNumber: 2307,
+		task: "Povinné minimální rezervy komerčních bank nalezneme: ",
+		answers: [
+			"na straně aktiv centrální banky a na straně pasiv komerční banky",
+			"na straně pasiv centrální banky a na straně pasiv komerční banky",
+			"na straně pasiv centrální banky a na straně aktiv komerční banky",
+			"na straně aktiv centrální banky a na straně aktiv komerční banky",
+			"pouze na straně pasiv komerční banky, v účetní bilanci centrální banky se neobjevují"
+		],
+		correctAnswer: 2
+	},
+
+	{
+		taskNumber: 2308,
+		task: "Do peněžního agregátu M1 naptří jedna z níže uvedených položek. Označte ji: ",
+		answers: [
+			"hotovost ve Vaší peněžence",
+			"hotovost v pokladně supermarketu",
+			"vklady na požádání",
+			"termínované vklady",
+			"hotovost ukrytá ve Vašem slamníku"
+		],
+		correctAnswer: 3
+	},
 ]

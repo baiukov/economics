@@ -28,7 +28,9 @@ export class Task2212 implements ITask {
 
 			oldGDP = multiplicator * government
 			deltaGDP = multiplicator * marginalC * government
-			newGDP = isRaise ? oldGDP + deltaGDP : oldGDP - deltaGDP
+			const y1 = multiplicator * oldGDP
+			const y2 = multiplicator * marginalC * oldGDP
+			newGDP = isRaise ? y1 + y2 : y1 - y2
 		}
 		while (newGDP * 100 % 1 != 0 || newGDP <= 0)
 

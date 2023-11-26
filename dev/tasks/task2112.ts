@@ -37,18 +37,14 @@ export class Task2112 implements ITask {
 		const nominalGDP2017 = amount1_2017 * price1_2017 + amount2_2017 * price2_2017 + amount3_2017 * price3_2017
 		const realGDP2017 = amount1_2017 * price1_2015 + amount2_2017 * price2_2015 + amount3_2017 * price3_2015
 
-		console.log(nominalGDP2016, realGDP2016)
 		const yNominal1 = (((nominalGDP2016 / nominalGDP2015) - 1) * 100).toFixed(2)
 		const yNominal2 = (((nominalGDP2017 / nominalGDP2016) - 1) * 100).toFixed(2)
 
 		const yReal1 = (((realGDP2016 / realGDP2015) - 1) * 100).toFixed(2)
 		const yReal2 = (((realGDP2017 / realGDP2016) - 1) * 100).toFixed(2)
 
-		const deflator2016 = ((1 - (nominalGDP2016 / realGDP2016)) * 100).toFixed(2)
-		const deflator2017 = ((1 - (nominalGDP2017 / realGDP2017)) * 100).toFixed(2)
-
-
-		console.log(yNominal1, yNominal2, yReal1, yReal2, deflator2016, deflator2017)
+		const deflator2016 = (((nominalGDP2016 / realGDP2016) - 1) * 100).toFixed(2)
+		const deflator2017 = (((nominalGDP2017 / realGDP2017) - 1) * 100).toFixed(2)
 
 		this.answer = [yNominal1, yNominal2, yReal1, yReal2, deflator2016, deflator2017]
 

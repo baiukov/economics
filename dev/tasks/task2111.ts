@@ -119,7 +119,6 @@ export class Task2111 implements ITask {
 		for (let i = 0; i < costsElements.length; i++) {
 			if (i != indexToFind) another.push(costsElements[i])
 		}
-		console.log(another)
 		do {
 			additionalElements = []
 			GDPCostMethod = 0
@@ -134,11 +133,10 @@ export class Task2111 implements ITask {
 				)
 				GDPCostMethod += value
 			}
-		} while (GDP > GDPCostMethod)
-		console.log(additionalElements)
+		} while (GDP < GDPCostMethod)
 		elements.push(...additionalElements)
 
-		elemToFind = GDPCostMethod - GDP
+		elemToFind = GDP - GDPCostMethod
 		NDP = GDP - amortizationValue
 		let taskString = "V dané ekonomice jsou známé následující údaje (v mil. Kč)<br><br>"
 		elements = shuffle(elements)

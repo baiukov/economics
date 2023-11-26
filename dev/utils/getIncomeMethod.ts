@@ -24,6 +24,7 @@ export const getIncomeMetod = () => {
 	)
 	GDP += incomesValue
 
+
 	const interestsValue = getRandom(300, 100)
 	elements.push(
 		{
@@ -33,6 +34,7 @@ export const getIncomeMetod = () => {
 	)
 	GDP += interestsValue
 
+
 	const rentsValue = getRandom(300, 100)
 	elements.push(
 		{
@@ -41,6 +43,7 @@ export const getIncomeMetod = () => {
 		}
 	)
 	GDP += rentsValue
+
 
 	const amortizatiionValue = getRandom(500, 100)
 	elements.push(
@@ -56,16 +59,18 @@ export const getIncomeMetod = () => {
 	)
 	GDP += amortizatiionValue
 
+
 	const isNetTaxes = getRandom(0, 99) < 50
 	if (isNetTaxes) {
 		const taxesValue = getRandom(500, 100)
 		elements.push(
 			{
 				name: incomeMethodElements.taxes.netTaxes,
-				value: amortizatiionValue
+				value: taxesValue
 			}
 		)
 		GDP += taxesValue
+
 	} else {
 		const taxesValue = getRandom(500, 100)
 		const subvence = getRandom(taxesValue, 99)
@@ -81,6 +86,7 @@ export const getIncomeMetod = () => {
 			}
 		)
 		GDP += (taxesValue - subvence)
+
 	}
 
 	const amountAnother = getRandom(5, 3)

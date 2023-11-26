@@ -68,7 +68,7 @@ export class Task2211 implements ITask {
 			<br>C = ${inputB.outerHTML}
 			<br>c) Velikost úspor
 			<br>S = ${inputC.outerHTML}
-			<br>d) Vypočtěte a zakreslete do grafu změnu rovnovážného důchodu (produktu), když se zvýší investice o ${additionalInvestments} mil. Kč a dále víme, že v dáne dvousektorové ekonomice lze popsat spotřební chování domácností mezním sklonem ke spotřebě, kdy c = ${marginalC}
+			<br>d) Vypočtěte a zakreslete do grafu změnu rovnovážného důchodu (produktu), když se zvýší investice o ${additionalInvestments} mil. Kč a dále víme, že v dáne dvousektorové ekonomice lze popsat spotřební chování domácností mezním sklonem ke spotřebě, kde c = ${marginalC}. Zaohruhlte nahoru.
 			<br>ΔY = ${inputDdY.outerHTML}. HDP = ${inputDY.outerHTML}<br>
 		`
 		const answerButton = document.createElement('button')

@@ -5,7 +5,6 @@ import { getCostsMethod } from '../utils/getCostsMethod.js'
 import { getIncomeMetod } from '../utils/getIncomeMethod.js'
 import { getRandom } from '../utils/getRandom.js'
 
-
 export class Task2110 implements ITask {
 	private taskNumber = 2110;
 	private taskHTML: HTMLDivElement | undefined
@@ -21,7 +20,6 @@ export class Task2110 implements ITask {
 		this.task = taskString
 		this.answer = GDP as string
 		this.taskHTML = this.createAnswerHTML() as HTMLDivElement
-		console.log(this.task, GDP)
 	}
 
 	private createAnswerHTML = () => {

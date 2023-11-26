@@ -32,8 +32,6 @@ export class Task2212 implements ITask {
 		}
 		while (newGDP * 100 % 1 != 0 || newGDP <= 0)
 
-		console.log(multiplicator, oldGDP, isRaise, newGDP)
-
 		this.taskString = `
 		Vláda ${!isRaise ? "sníží" : "zvýší"} vládní nákupy statků a služeb o ${government} mld. Kč a současně ${!isRaise ? "zvýší" : "sníží"} transferové platby ve stejné výši. Mezní sklon ke spotřebě je ${marginalC} a daňová sazba ${taxRate}. 
 		`
@@ -72,21 +70,13 @@ export class Task2212 implements ITask {
 		const inputB = document.getElementById(`task-${this.taskNumber}-answer-b`) as HTMLInputElement
 		const [answerA, answerB] = this.answers
 		inputA.style.background = parseFloat(inputA.value) == answerA ? Colors.green : Colors.red
-		inputB.style.background = parseFloat(inputB.value) == answerB ? Colors.green : Colors.red
+		inputB.style.background = inputB.value == answerB.toFixed(0) ? Colors.green : Colors.red
 	}
 
 	private getCostsCurve = () => {
 		const autonomicCost = getRandom(100, 1000)
 		const disposableCostsC = getRandomFloatFixed1(1.0, 0.1)
 		return [autonomicCost, disposableCostsC]
-	}
-
-	private getPlannedInvestice = () => {
-		return getRandom(100, 1000)
-	}
-
-	private additionalInvestice = () => {
-		return getRandom(1, 99)
 	}
 
 	private getGovernment = () => {

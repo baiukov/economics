@@ -119,6 +119,19 @@ export const testTasks = [
 	},
 
 	{
+		taskNumber: 2306,
+		task: "Pokud banky udržují jen částečné rezervy, je výše peněžního multiplikátoru:",
+		answers: [
+			"1",
+			"menší než 1",
+			"větší než 0, ale menší než 1",
+			"záporná",
+			"nelze jednoznačně určit"
+		],
+		correctAnswer: 2
+	},
+
+	{
 		taskNumber: 2307,
 		task: "Povinné minimální rezervy komerčních bank nalezneme: ",
 		answers: [

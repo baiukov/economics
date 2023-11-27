@@ -12,7 +12,7 @@ export class Task2303 implements ITask {
 		const isInCorrect = getRandom(99, 0) < 20
 		const isActives = !isInCorrect && getRandom(99, 0) < 20
 
-		const isAquisition = !isActives && getRandom(99, 0) < 50
+		const isGrowth = !isActives && getRandom(99, 0) < 50
 
 		let dM, r, dD
 		do {
@@ -31,12 +31,22 @@ export class Task2303 implements ITask {
 			"žádná z nabídek není správnou odpovědí",
 		]
 
-		let correctAnswer = isAquisition ? 2 : 3
+		let correctAnswer = isGrowth ? 2 : 3
 		correctAnswer = isActives ? 0 : correctAnswer
 		correctAnswer = isInCorrect ? 4 : correctAnswer
 
+		const actions = [
+			`${isGrowth ? "koupí" : "prodá"} na otevřeném trhu vladní obligace za `,
+			`${isGrowth ? "koupí" : "prodá"} devize za domácí měnu za `,
+			"poskytne úvěr komerční bance ve výši ",
+		]
+
+		const action = isGrowth ?
+			actions[getRandom(actions.length - 1, 0)] :
+			actions[getRandom(actions.length - 2, 0)]
+
 		this.taskString = `
-		Centrální banka ${isAquisition ? "koupí" : "prodá"} na otevřeném trhu vládní obligace za ${dD} mld. Kč. Neexistuje hotovostní oběživo. Přesně dodržovaná sazba povinných minimálních rezerv činí ${r}%. ${!isActives ? "Jak se změní peněžní zásoba (v mld. Kč)?" : "Aktiva centrální banky: "}
+		Centrální banka ${action} ${dD} mld. Kč. Neexistuje hotovostní oběživo. Přesně dodržovaná sazba povinných minimálních rezerv činí ${r}%. ${!isActives ? "Jak se změní peněžní zásoba (v mld. Kč)?" : "Aktiva centrální banky: "}
 	`
 
 		const test = new TaskTest

@@ -156,4 +156,53 @@ export const testTasks = [
 		],
 		correctAnswer: 3
 	},
+
+	{
+		taskNumber: 2404,
+		task: "Který z následujících nabídkových šoků nepovede k posunu pozitivně skloněné křivky krátkodobé agregátní poptávky (SRAS) doleva nahoru?",
+		answers: [
+			"růst nákladu na pracovní sílu",
+			"pokles daní z důchodů výrobců",
+			"růst cen dovážených vstupů v důsledku znehodnocení nominálního kurzu domácí měny",
+			"růst nepřímých daní",
+			"žádná z nabídek"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2405,
+		task: "Mezi příčiny, které povedou k recesi vyvoláné nabídkovým šokem, patří: ",
+		answers: [
+			"snížení daňových sazeb",
+			"růst obyvatelstva",
+			"pokles cen dovážené ropy",
+			"zvýšení produktivity výrobních faktorů",
+			"žádná z nabídek"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 2406,
+		task: "Která z následujících událostí povede k poklesu agregátní poptávky: ",
+		answers: [
+			"pokles úrokových sazeb",
+			"růst cen akcií",
+			"růst sazeb důchodových daní",
+			"optimistická očekávání ze strany investorů",
+			"růst populace"
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 2407,
+		task: "Zvýšení autonomní spotřeby povede z dlouhodobého hlediska k: ",
+		answers: [
+			"růstu reálného produktu, růstu zaměstnanosti a růstu cenové hladiny",
+			"žádné změně reálného produktu, žádné změně zaměstnanosti a růstu cenové hladiny",
+			"žádné změně reálného produktu, žádné změně zaměstnanosti a žádné změně cenové hladiny",
+			"poklesu reálného produktu, poklesu zaměstnanosti a růstu cenové hladiny",
+			"poklesu reálného produktu, poklesu zaměstnanosti a poklesu cenové hladiny",
+		],
+		correctAnswer: 1
+	},
 ]

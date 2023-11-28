@@ -179,7 +179,7 @@ export const testTasks = [
 			"zvýšení produktivity výrobních faktorů",
 			"žádná z nabídek"
 		],
-		correctAnswer: 3
+		correctAnswer: 4
 	},
 	{
 		taskNumber: 2406,

@@ -40,7 +40,7 @@ export class Task2311 implements ITask {
 		inputB.setAttribute("type", "text")
 		inputB.setAttribute("id", `task-${this.taskNumber}-answer-b`)
 		answerDiv.innerHTML = `
-			a) Vypočítejte sazbu povinných minimálních rezerv ${inputA.outerHTML}
+			a) Vypočítejte sazbu povinných minimálních rezerv ${inputA.outerHTML}%
 			<br>b) Vypočítejte, jak se změní peněžní zásoba v dané ekonomice ${inputB.outerHTML}
 			<br>
 		`

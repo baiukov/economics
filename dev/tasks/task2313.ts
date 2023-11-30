@@ -9,20 +9,21 @@ export class Task2313 implements ITask {
 
 	public constructor() {
 
-		const isUp = getRandom(0, 99) < 70
+		const isUp = getRandom(0, 99) < 60
 
-		let r1, r2, p1, p2, deltaRate, deltaPrice, isLocalUp
+		let r1, r2, p1, p2, deltaRate1, deltaRate2, isLocalUp
 		do {
-			r1 = getRandom(10, 1)
-			r2 = getRandom(12, r1 + 1)
 			p1 = getRandom(10, 1)
-			p2 = getRandom(12, r2 + 1)
+			r1 = getRandom(12, p1 + 1)
 
-			deltaRate = r2 - r1
-			deltaPrice = p2 - p1
-			isLocalUp = deltaRate - deltaPrice > 0 ? true : false
+			p2 = getRandom(10, 1)
+			r2 = getRandom(12, p2 + 1)
 
-		} while (isUp != isLocalUp)
+			deltaRate1 = r1 - p1
+			deltaRate2 = r2 - p2
+			isLocalUp = deltaRate2 - deltaRate1 < 0 ? true : false
+
+		} while (isUp != isLocalUp || r1 == p1 || r2 == p2)
 
 		const answers = [
 			"Vzroste",
@@ -32,7 +33,7 @@ export class Task2313 implements ITask {
 		const correctAnswer = isUp ? 0 : 1
 
 		this.taskString = `
-			Jak zareagují obšané dané ekonomiky, pokud úrokové sazby v hypotečních úvěrů vzrostou z ${r1}% na ${r2}% a zároveň se očekává zvýšení růstu cen domů a bytů ze ${p1}% na ${p2}% . Vzroste poptávka po nových bytech a domech?
+			Jak zareagují občané dané ekonomiky, pokud úrokové sazby v hypotečních úvěrů vzrostou z ${r1}% na ${r2}% a zároveň se očekává zvýšení růstu cen domů a bytů ze ${p1}% na ${p2}% . Vzroste poptávka po nových bytech a domech?
 		`
 
 		const test = new TaskTest

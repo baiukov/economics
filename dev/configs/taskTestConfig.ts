@@ -146,7 +146,7 @@ export const testTasks = [
 
 	{
 		taskNumber: 2308,
-		task: "Do peněžního agregátu M1 naptří jedna z níže uvedených položek. Označte ji: ",
+		task: "Do peněžního agregátu M1 nepatří jedna z níže uvedených položek. Označte ji: ",
 		answers: [
 			"hotovost ve Vaší peněžence",
 			"hotovost v pokladně supermarketu",

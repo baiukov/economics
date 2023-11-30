@@ -171,18 +171,31 @@ export const testTasks = [
 	},
 	{
 		taskNumber: 2405,
-		task: "Mezi příčiny, které povedou k recesi vyvoláné nabídkovým šokem, patří: ",
+		task: "Který z následujících nabídkových šoků nepovede k posunu pozitivně skloněné křivky krátkodobé agregátní poptávky (SRAS) doleva nahoru?",
 		answers: [
-			"snížení daňových sazeb",
-			"růst obyvatelstva",
-			"pokles cen dovážené ropy",
-			"zvýšení produktivity výrobních faktorů",
+			"růst nákladu na pracovní sílu",
+			"pokles daní z důchodů výrobců",
+			"růst cen dovážených vstupů v důsledku znehodnocení nominálního kurzu domácí měny",
+			"růst nepřímých daní",
 			"žádná z nabídek"
 		],
-		correctAnswer: 4
+		correctAnswer: 1
 	},
+
 	{
 		taskNumber: 2406,
+		task: "Mezi příčiny, které povedou k recesi v důsledku poptávkového šoku, patří: ",
+		answers: [
+			"pokles autonomní spotřeby",
+			"snížení důchodových daní",
+			"růst cen ropy",
+			"pokles nominálních mezd",
+			"zvýšení transferů"
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 2407,
 		task: "Která z následujících událostí povede k poklesu agregátní poptávky: ",
 		answers: [
 			"pokles úrokových sazeb",
@@ -194,7 +207,7 @@ export const testTasks = [
 		correctAnswer: 2
 	},
 	{
-		taskNumber: 2407,
+		taskNumber: 2408,
 		task: "Zvýšení autonomní spotřeby povede z dlouhodobého hlediska k: ",
 		answers: [
 			"růstu reálného produktu, růstu zaměstnanosti a růstu cenové hladiny",

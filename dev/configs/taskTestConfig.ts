@@ -291,4 +291,79 @@ export const testTasks = [
 		],
 		correctAnswer: 0
 	},
+
+	{
+		taskNumber: 2602,
+		task: "Nákladová inflace se objeví tehdy, když",
+		answers: [
+			"nominální mzdy rostou pomaleji než produktivita práce",
+			"nominální mzdy rostou rychleji než produktivita práce",
+			"nominální mzdy rostou stejně rychle jako produktivita práce",
+			"rostou spotřební výdaje domácností",
+			"rostou investiční výdaje firem",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2603,
+		task: "Mezi příčiny poptávkové inflace nepatří: ",
+		answers: [
+			"expanzivní monetární politika",
+			"růst nákladů firem v důsledku znehodnocení měny",
+			"financování deficitů státního rozpočtu emisí peněz",
+			"politika udržování skutečné míry nezaměstnanosti pod přírozenou mírou",
+			"růst transferových plateb",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2604,
+		task: "Reálnou úrokovou sazbu můžeme zjednodušeně vypočítat jako: ",
+		answers: [
+			"součet nominální úrokové sazby a míry inflace",
+			"rozdíl mezi nominální úrokovou sazbou a mírou inflace",
+			"rozdíl tempa růstu reálného produktu a míry inflace",
+			"rozdíl tempa růstu nominálního produktu a míry inflace",
+			"podíl nominální úrokové sazby a míry inflace",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2605,
+		task: "Pokud je skutečná míra inflace vyšší než očekávaná: ",
+		answers: [
+			"získavají věřitelé na úkor dlužníku",
+			"získavají dlužníci na úkor věřitelů",
+			"získavají zaměstnavatelé na úkor zaměstnanců",
+			"získavají zaměstnanci na úkor zaměstnavatelů",
+			"platí možnosti b) a d)",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 2607,
+		task: "Podél stabilní krátkodobé Phillipsovy křivky (pohybujeme se zleva doprava): ",
+		answers: [
+			"skutečná míra inflace roste a skutečná míra nezaměstnanosti klesá",
+			"skutečná míra inflace klesá a skutečná míra nezaměstnanosti roste",
+			"skutečná míra inflace i skutečná míra nezaměstnanosti rostou",
+			"skutečná míra inflace i skutečná míra nezaměstnanosti klesjí",
+			"skutečná míra inflace klesá a skutečná míra nezaměstnanosti se nemění",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2608,
+		task: "Pro dlouhodobou Phillipsovu křivku platí: ",
+		answers: [
+			"skutečná a očekávaná míra inflace se rovnají",
+			"je vertikální na úrovni přirozené míry nezaměstnanosti",
+			"expanzivní hospodářská politika vede pouze k růstu míry inflace",
+			"v ekonomice neexistuje cyklická nezaměstnanost",
+			"platí všechny předchozí odpovědi",
+		],
+		correctAnswer: 4
+	},
+
+
 ]

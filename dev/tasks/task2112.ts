@@ -43,8 +43,8 @@ export class Task2112 implements ITask {
 		const yReal1 = (((realGDP2016 / realGDP2015) - 1) * 100).toFixed(2)
 		const yReal2 = (((realGDP2017 / realGDP2016) - 1) * 100).toFixed(2)
 
-		const deflator2016 = (((nominalGDP2016 / realGDP2016) - 1) * 100).toFixed(2)
-		const deflator2017 = (((nominalGDP2017 / realGDP2017) - 1) * 100).toFixed(2)
+		const deflator2016 = ((nominalGDP2016 / realGDP2016) * 100).toFixed(2)
+		const deflator2017 = ((nominalGDP2017 / realGDP2017) * 100).toFixed(2)
 
 		this.answer = [yNominal1, yNominal2, yReal1, yReal2, deflator2016, deflator2017]
 
@@ -228,7 +228,7 @@ export class Task2112 implements ITask {
 				<td>${inputYReal2017.outerHTML}%</td>
 			</tr>
 			<tr>
-				<td>Deflator</td>
+				<td>Deflátor</td>
 				<td>${inputdeflator2016.outerHTML}%</td>
 				<td>${inputdeflator2017.outerHTML}%</td>
 			</tr>

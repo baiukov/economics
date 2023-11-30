@@ -30,6 +30,7 @@ export class Task2613 implements ITask {
 		const foodNames = Object.keys(food)
 		for (let i = 0; i < 3; i++) {
 			const randomFoodName = foodNames[getRandom(foodNames.length - 1, 0)]
+			if (customerBasket[randomFoodName]) i--
 			customerBasket[randomFoodName] = food[randomFoodName]
 		}
 

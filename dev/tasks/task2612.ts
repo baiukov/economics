@@ -5,16 +5,14 @@ import { getRandom } from '../utils/getRandom.js'
 import { getRandomFloat } from '../utils/getRandomFloat.js'
 
 
-export class Task2512 implements ITask {
-	private taskNumber = 2512;
+export class Task2612 implements ITask {
+	private taskNumber = 2612;
 	private taskHTML: HTMLDivElement | undefined
 	private task: string | undefined
 	private pageBuilder = PageBuilder.getPageBuilder()
 	private answer: string[] = []
 
 	public constructor() {
-		const isCostsMethod = getRandom(0, 99) < 50
-
 		const [amount1_2015, price1_2015] = this.getProduct()
 		const [amount1_2016, price1_2016] = this.getProduct(amount1_2015, price1_2015)
 		const [amount1_2017, price1_2017] = this.getProduct(amount1_2016, price1_2016)

@@ -218,4 +218,77 @@ export const testTasks = [
 		],
 		correctAnswer: 1
 	},
+
+	{
+		taskNumber: 2501,
+		task: "Míra nezaměstnanosti (v %) se vypočte jako: ",
+		answers: [
+			"podíl nezaměstnaných a ekonomicky aktivních obyvatel vynásobeny 100",
+			"podíl nezaměstnaných a pracovní síly vynásobeny stem",
+			"podíl nezaměstnaných a součtu nezaměstnaných a zaměstnaných vynásobeny 100",
+			"podíl nezaměstnaných a ekonomicky neaktivních obyvatel vynásobeny 100",
+			"platí a,b,c současně",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 2502,
+		task: "Přírozená míra nezaměstnanosti zahrnuje: ",
+		answers: [
+			"frikční a cyklickou nezaměstnanosti",
+			"pouze frikční nezaměstnanost",
+			"pouze strukturální nezaměstnanost",
+			"strukturální a cyklickou nezaměstanosti",
+			"frikční a strukturální nezaměstnanosti",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 2503,
+		task: "Který z níže uvedených typů nezaměstnanosti má největší vliv na významné regionální rozdíly ve výši míry nezaměstnanosti: ",
+		answers: [
+			"frikční nezaměstnanost",
+			"dobrovolná nezaměstnanost",
+			"struktuální nezaměstnanost",
+			"cyklická nezaměstnanost",
+			"nedobrovolná nezaměstnanost",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 2504,
+		task: "Dobrovolně jsou nezaměstnaní ti, kteří: ",
+		answers: [
+			"jsou ochotní pracovat při dané mzdové sazbě, ale neseženou práci",
+			"nejsou ochotní pracovat při dané mzdové sazbě",
+			"pouze cyklicky nezaměstnaní",
+			"pouze strukturální nezaměstnaní",
+			"cyklicky a strukturální nezaměstnaní",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 2505,
+		task: "Kterým z níže uvedených opatření může vláda zvýšit přirozenou míru nezaměstnanosti",
+		answers: [
+			"zavedením podpor pro absolventská místa",
+			"zlepšením informovanosti o volných pracovních pozicích prostřednictvím pracovních úřadů",
+			"zvýšením podpor v nezaměstnanosti",
+			"zvýšením počtu dotovaných rekvalifikačních programů",
+			"zavedením daňových úlev pro zaměstnavatele při zaměstnávání zdravotné handicapovaných osob",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 2506,
+		task: "Podle mechanizmu tzv. Okunova zákona je růst skutečné míry nezaměstnanosti nad přirozenou mírou nezaměstnanosti o 1 procentní hod spojen ",
+		answers: [
+			"s poklesem suktečného produktu pod potenciální produkt o více než 1%",
+			"s poklesem suktečného produktu pod potenciální produkt o méně než 1%",
+			"s poklesem suktečného produktu pod potenciální produkt přesně o 1%",
+			"s růstem suktečného produktu nad potenciální produkt o více než 1%",
+			"žádná z nabízených možností není správná",
+		],
+		correctAnswer: 0
+	},
 ]

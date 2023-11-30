@@ -17,5 +17,6 @@ export const topicNames = {
 	22: { name: "Agregatní produkt", tasks: [2211, 2212] },
 	23: { name: "Peníze", tasks: [2301, 2302, 2303, 2304, 2305, 2306, 2307, 2308, 2310, 2311, 2312, 2313, 2314] },
 	24: { name: "AD-AS Model", tasks: [2404, 2405, 2406, 2407, 2408] },
-	25: { name: "Inflace", tasks: [2511, 2512, 2513] }
+	25: { name: "Nezaměstnanost", tasks: [2501, 2502, 2503, 2504, 2505, 2506, 2510, 2511] },
+	26: { name: "Inflace", tasks: [2611, 2612, 2613] }
 }

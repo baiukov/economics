@@ -1,73 +1,56 @@
 import { ITask } from '../Itask.js'
+import { PageBuilder } from '../pageBuilder.js'
+import { Colors } from '../utils/colors.js'
 import { getRandom } from '../utils/getRandom.js'
-import { getRandomFloat } from '../utils/getRandomFloat.js'
-import { TaskTest } from './taskTest.js'
 
 export class Task2511 implements ITask {
-	private taskNumber = 2511;
-	private taskAnswer: HTMLDivElement | undefined
+	private taskNumber = 2511
 	private taskString: string | undefined
+	private answers: number[] = []
+	private taskAnswer: HTMLDivElement | undefined
+	private pageBuilder = PageBuilder.getPageBuilder()
 
-	public constructor() {
+	constructor() {
 
-		const inflationTypes: Record<string, number> = {
-			"Mírná inflace": 1,
-			"Padivá inflace": 10,
-			"Hyperinflace": 100,
-			"Deflace": -1,
-		}
-
-		const firstYear = getRandom(2000, 1990)
-		const inflationIndex = getRandom(Object.keys(inflationTypes).length - 1, 0)
-		const inflationName = Object.keys(inflationTypes)[inflationIndex]
-		const inflationType = inflationTypes[inflationName]
-
-		const year = firstYear + getRandom(9, 0)
-		const inflation = getRandomFloat(10 * inflationType, inflationType)
-
-
-		let tableStrInflations = ""
-		let tableStrYears = ""
-		for (let i = 0; i < 10; i++) {
-			const currentYear = firstYear + i
-			let currentInflation = currentYear == year ? inflation : getRandomFloat(20, 0.1) * 10
-			tableStrInflations += `
-					<td>${currentInflation.toFixed(1)}%</td>
-			`
-			tableStrYears += `
-					<td>${currentYear}</td>
-			`
-		}
+		const realUnemployment = getRandom(2, 15)
+		const natureUnemployment = getRandom(realUnemployment, 1)
 
 		this.taskString = `
-			<table>
-				<tbody>
-				<tr>
-					<td>Míra inflace</td>
-					${tableStrYears}
-				</tr>
-				<tr>
-				<td></td> 
-				${tableStrInflations}
-				</tr>
-				</tbody>
-			</table>
-			Jak byste nazvali inflaci například v roce ${year}?
+			Zjistěte náklady cyklické nezaměstnanosti v podobě odchylky skutečné vytvořeného produktu od potenciálního produktu, jestliže víme, že skutečná míra nezaměstnanosti činí ${realUnemployment} % přírozená míra nezaměstnanosti je ${natureUnemployment} %.
 		`
-
-		const test = new TaskTest
-			(
-				this.taskNumber,
-				this.taskString,
-				Object.keys(inflationTypes),
-				inflationIndex
-			)
-		this.taskAnswer = test.getTaskAnswer()
+		const dY = (realUnemployment - natureUnemployment) * 2.5
+		this.answers = [dY]
+		this.taskAnswer = this.createAnswerHTML() as HTMLDivElement
 	}
 
-	public getTaskAnswer() { return this.taskAnswer }
-	public getTaskNumber() { return this.taskNumber }
-	public getTaskString() { return this.taskString }
+	private createAnswerHTML = () => {
+		const answerDiv = this.pageBuilder.createElement('div', {
+			attributes: [{ attribute: "class", value: "answer-field" }]
+		})
+		const inputdY = document.createElement('input')
+		inputdY.setAttribute("type", "text")
+		inputdY.setAttribute("id", `task-${this.taskNumber}-answer-dY`)
 
+		answerDiv.innerHTML += `
+		ΔY ≈ ${inputdY.outerHTML}% <br>
+		`
+		const answerButton = document.createElement('button')
+		answerButton.setAttribute('id', `task-${this.taskNumber}-answer`)
+		answerButton.innerText = "Check"
+		answerButton.addEventListener('click', () => {
+			this.check()
+		})
+		answerDiv.appendChild(answerButton)
+		return answerDiv
+	}
 
+	private check() {
+		const inputdY = document.getElementById(`task-${this.taskNumber}-answer-dY`) as HTMLInputElement
+		const [dY] = this.answers
+		inputdY.style.background = inputdY.value == dY.toString() ? Colors.green : Colors.red
+	}
+
+	public getTaskNumber = () => { return this.taskNumber }
+	public getTaskString = () => { return this.taskString }
+	public getTaskAnswer = () => { return this.taskAnswer }
 }

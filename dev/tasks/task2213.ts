@@ -15,7 +15,7 @@ export class Task2213 implements ITask {
 		const isMPC = getRandom(0, 99) < 40
 		let t, c, s, Ca, TR, Ip, G, TA, multiplicator, balancedGDP, Yd, C
 		do {
-			t = getRandom(20, 2) / 100
+			t = parseFloat((getRandom(20, 2) / 100).toFixed(2))
 			const mp = parseFloat(getRandomFloat(0.1, 0.7).toFixed(1))
 			c = isMPC ? mp : 1 - mp
 			s = isMPC ? 1 - mp : mp
@@ -33,7 +33,7 @@ export class Task2213 implements ITask {
 		} while (balancedGDP * 10 % 1 != 0 || Yd * 10 % 1 != 0 || C * 10 % 1 != 0)
 
 		this.taskString = `
-			Třísektorová ekonomika je charakterizována následovně: sazba důchodové daně ${t * 100}%, mezní sklon k${isMPC ? "e spotřebě" : " úsporám"} ${isMPC ? c : s}, autonomní spotřeba domacností ${Ca}, transfery ${TR}, plánované investice ${Ip}, vládní investice ${G}, autonomní daně ${TA}. Určete:
+			Třísektorová ekonomika je charakterizována následovně: sazba důchodové daně ${(t * 100).toFixed()}%, mezní sklon k${isMPC ? "e spotřebě" : " úsporám"} ${isMPC ? c : s}, autonomní spotřeba domacností ${Ca}, transfery ${TR}, plánované investice ${Ip}, vládní investice ${G}, autonomní daně ${TA}. Určete:
 		`
 		console.log(multiplicator, balancedGDP, Yd, C)
 

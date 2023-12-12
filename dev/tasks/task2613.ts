@@ -57,7 +57,6 @@ export class Task2613 implements ITask {
 		cpi = (cpi / weights) * 100
 		const inflation = (cpi - 1) * 100
 
-
 		this.taskString = `
 			<table>
 				<tr>
@@ -71,6 +70,7 @@ export class Task2613 implements ITask {
 		`
 		this.taskAnswer = this.createAnswerHTML()
 		this.answers = [cpi.toFixed(2), inflation.toFixed(2)]
+		console.log(this.answers)
 	}
 
 	private createAnswerHTML = () => {

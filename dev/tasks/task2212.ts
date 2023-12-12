@@ -28,8 +28,8 @@ export class Task2212 implements ITask {
 
 			oldGDP = multiplicator * government
 			deltaGDP = multiplicator * marginalC * government
-			const y1 = multiplicator * oldGDP
-			const y2 = multiplicator * marginalC * oldGDP
+			const y1 = multiplicator * government
+			const y2 = multiplicator * marginalC * government
 			newGDP = isRaise ? y1 + y2 : y1 - y2
 		}
 		while (newGDP * 100 % 1 != 0 || newGDP <= 0)
@@ -72,7 +72,7 @@ export class Task2212 implements ITask {
 		const inputB = document.getElementById(`task-${this.taskNumber}-answer-b`) as HTMLInputElement
 		const [answerA, answerB] = this.answers
 		inputA.style.background = parseFloat(inputA.value) == answerA ? Colors.green : Colors.red
-		inputB.style.background = inputB.value == answerB.toFixed(0) ? Colors.green : Colors.red
+		inputB.style.background = inputB.value == answerB.toString() ? Colors.green : Colors.red
 	}
 
 	private getCostsCurve = () => {

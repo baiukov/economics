@@ -55,7 +55,7 @@ export class Task2510 implements ITask {
 		answerDiv.innerHTML += `
 			a) Počet ekonomicky aktivních obyvatel ${inputEA.outerHTML} <br>
 			b) Počet ekonomicky neaktivních obyvatel ${inputEN.outerHTML} <br>
-			c) Míru nezaměstnanosti ${inputU.outerHTML} <br>
+			c) Míru nezaměstnanosti ${inputU.outerHTML} %<br>
 		`
 		const answerButton = document.createElement('button')
 		answerButton.setAttribute('id', `task-${this.taskNumber}-answer`)

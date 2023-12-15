@@ -276,6 +276,78 @@ export const testTasks = [
 		correctAnswer: 1
 	},
 	{
+		taskNumber: 401,
+		task: "Spotřebitel bude nakupovat optimální množství dvou statků A a B, pokud:",
+		answers: [
+			"z nákupu zboží A bude mít stejný užitek jako ze zboží B",
+			"z nákupu poslední jednotky zboží A bude mít stejný užitek jako z nákupu poslední jednotky zboží B",
+			"každá koruna nákupu zboží A mu přinese stejný užitek jako každá koruna nákupu zboží B",
+			"poslední koruna nákupu za zboží A mu přinese stejný užitek jako poslední koruna vydaná za zboží B",
+			"poslední koruny vydané na nákup zboží A i B nepřinesou zvýšení užitku spotřebitele"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 402,
+		task: "Jestliže spotřebitel v průběhu dne spotřebovává jednu tabulku čokolády za druhou a nejí nic jiného, postupně zjišťuje, že:",
+		answers: [
+			"neustále klesá jeho celkový užitek",
+			"neustále roste jeho mezní užitek",
+			"současně neustále roste jeho celkový i mezní užitek",
+			"roste jeho mezní užitek, zatímco celkový klesá",
+			"roste celkový užitek, zatímco mezní roste a pak klesá"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 403,
+		task: "Jestliže cena pomerančů klesne, spotřebitel bude pravděpodobně kupovat:",
+		answers: [
+			"méně pomerančů, takže jeho mezní užitek stoupne",
+			"méně pomerančů, takže jeho mezní užitek klesne",
+			"více pomerančů, takže jeho mezní užitek vzroste",
+			"více pomerančů, takže jeho mezní užitek klesne",
+			"neplatí žádná varianta"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 404,
+		task: "Zákon klesajícího užitku znamená, že:",
+		answers: [
+			"s rostoucím množstvím spotřebovaného statku dodatečné uspokojení ze spotřeby klesá",
+			"celkové uspokojení člověka s dodatečnou spotřebou zboží neustále roste",
+			"celkové uspokojení s růstem spotřeby vždy klesá",
+			"s růstem příjmů roste spotřeba všech statků",
+			"osobní uspokojení s rostoucí příjmem neustále roste"
+		],
+		correctAnswer: 0
+	},
+	// {
+	// 	taskNumber: 308,
+	// 	task: "Spotřebiteli X chutná pouze pravá Plzeň a nemá rád Budvar (bolí ho z něj hlava). Spotřebitel Y není schopen mezi těmito druhy piv rozlišovat. Pravděpodobně elastičtější poptávka po pivu bude:",
+	// 	answers: [
+	// 		"u spotřebitele X",
+	// 		"u spotřebitele Y",
+	// 		"poptávka bude z hlediska elasticity u obou stejná",
+	// 		"u spotřebitele, který piva kupuje méně",
+	// 		"na základě zadaných informací nelze určit"
+	// 	],
+	// 	correctAnswer: 1
+	// },
+	// {
+	// 	taskNumber: 308,
+	// 	task: "Spotřebiteli X chutná pouze pravá Plzeň a nemá rád Budvar (bolí ho z něj hlava). Spotřebitel Y není schopen mezi těmito druhy piv rozlišovat. Pravděpodobně elastičtější poptávka po pivu bude:",
+	// 	answers: [
+	// 		"u spotřebitele X",
+	// 		"u spotřebitele Y",
+	// 		"poptávka bude z hlediska elasticity u obou stejná",
+	// 		"u spotřebitele, který piva kupuje méně",
+	// 		"na základě zadaných informací nelze určit"
+	// 	],
+	// 	correctAnswer: 1
+	// },
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [

@@ -4,10 +4,16 @@ import { testTasks } from './configs/taskTestConfig.js'
 import { topicNames } from './configs/topicConfig.js'
 import { PageBuilder } from './pageBuilder.js'
 import { Task1006 } from './tasks/task1006.js'
+import { Task105 } from './tasks/task105.js'
+import { Task106 } from './tasks/task106.js'
+import { Task205 } from './tasks/task205.js'
 import { Task2103 } from './tasks/task2103.js'
 import { Task2110 } from './tasks/task2110.js'
 import { Task2111 } from './tasks/task2111.js'
 import { Task2112 } from './tasks/task2112.js'
+import { Task212 } from './tasks/task212.js'
+import { Task215 } from './tasks/task215.js'
+import { Task216 } from './tasks/task216.js'
 import { Task2211 } from './tasks/task2211.js'
 import { Task2212 } from './tasks/task2212.js'
 import { Task2213 } from './tasks/task2213.js'
@@ -69,7 +75,14 @@ export class Economy {
 	public getTopics() { return this.topics }
 
 	private generateAllTasks() {
-		this.tasks[1006] = new Task1006()
+
+		this.tasks[105] = new Task105()
+		this.tasks[106] = new Task106()
+
+		this.tasks[205] = new Task205()
+		this.tasks[212] = new Task212()
+		this.tasks[215] = new Task215()
+		this.tasks[216] = new Task216()
 
 		this.tasks[911] = new Task911()
 		this.tasks[912] = new Task912()
@@ -77,6 +90,8 @@ export class Economy {
 		this.tasks[914] = new Task914()
 		this.tasks[916] = new Task916()
 		this.tasks[918] = new Task918()
+
+		this.tasks[1006] = new Task1006()
 
 		this.tasks[718] = new Task718()
 		this.tasks[717] = new Task717()

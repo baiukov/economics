@@ -1,5 +1,247 @@
 export const testTasks = [
 	{
+		taskNumber: 101,
+		task: "Mikroekonomie analyzuje",
+		answers: [
+			"chování dílčích ekonomických subjektů",
+			"faktory vyvolávající poruchy celé ekonomiky",
+			"procesy hospodářské politiky odstraňující negativní důsledky hospodářského cyklu",
+			"tvorbu cen ve firmách",
+			"platí několik možností"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 102,
+		task: "Ekonomická věda zkoumá",
+		answers: [
+			"bohatství",
+			"směnu mezi domácnostmi a firmami",
+			"chování a rozhodování domácností a firem v ekonomickém životě",
+			"alokaci vzácných zdrojů k produkci užitečných statků",
+			"zkoumá vše uvedené"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 103,
+		task: "Pozitivní ekonomie",
+		answers: [
+			"hodnotí a popisuje ekonomickou realitu",
+			"popisuje fungování ekonomiky a odhaluje zákonitosti tohoto fungování",
+			"vytváří vize dokonalejší společnosti a ekonomiky",
+			"pouze ekonomickou realitu hodnotí",
+			"všechny odpovědí jsou správné"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 104,
+		task: "Normativní ekonomie",
+		answers: [
+			"se snáží hrát aktivní roli v ekonomickém systému",
+			"zahrnuje etiku a hodnotové soudy",
+			"vytváří vizi dokonalejšího ekonomického systému",
+			"klade si otázky 'jaká ekonomická realita je' a současně 'jaká by být měla'",
+			"všechny odpovědí jsou správné"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 109,
+		task: "Který z následujících statků je vždy volném statkem",
+		answers: [
+			"pitná voda",
+			"čísty vzduch ve městě",
+			"silnice a dálnice",
+			"písek v poušti",
+			"vše uvedené"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 110,
+		task: "Za vzacný statek považujeme ten, který:",
+		answers: [
+			"byl vyroben",
+			"byl vyroben a jehož množství je omezené",
+			"je užitečný",
+			"je užitečný a jehož množství je omezené",
+			"se vyskytuje v omezeném množství"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 107,
+		task: "Klesající výnosy z variabilního vstupu práce při fixním množství půdy je možné nejlépe vysvětlit:",
+		answers: [
+			"poklesem celkové produkce",
+			"kyselostí půdy",
+			"tím, že nejdříve se obdělávají nejlepší půdy",
+			"tím, že nejlepší dělníci jsou do zaměstnání najímáni přednostně jako první",
+			"poklesem mezního výnosu (produktu) práce, protože každá nová jednotka práce má k dispozici méně půdy"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 108,
+		task: "Předpokládáme pouze dva výrobní faktory. Podle zákona klesajících mezních výnosů:",
+		answers: [
+			"s rostoucím objemem obou výrobních faktorů klesá celkový výstup",
+			"s rostoucím objemem obou výrobních faktorů roste celkový výstup stále rychleji",
+			"s rostoucím objemem obou výrobních faktorů roste celkový výstup stále pomaleji",
+			"s rostoucím objemem variabilního výrobního faktoru roste celkový výstup stále pomaleji",
+			"s rostoucím objemem variabilního výrobního faktoru roste celkový výstup stále rychleji"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 201,
+		task: "Princip neviditené ruky trhu tvrdí, že:",
+		answers: [
+			"sledování vlastního zájmu vede k prospěchu pro všechny subjekty na daném trhu",
+			"vláda musí podporovat ekonomickou aktivitu tak, aby přinášela nejlepší výsledky pro všechny",
+			"vláda vydáváním zákonů působí jako neviditelný koordinátor trhů",
+			"jednotlivci sledováním vlastních zájmů poškozují ostatní subjekty trhu",
+			"žádná z odpovědí nepopisuje princip neviditelné ruky trhu"
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 202,
+		task: "Uvažujeme standardní graf nabídky a poptávky. Co se stane s cenou statku X, pokud dojde ke zdražení výrobního substitutu (alternativního výrobku) za jinak stejných podmínek?",
+		answers: [
+			"cena statku X klesne",
+			"cena statku X vzroste",
+			"cena statku X se nezmění",
+			"nelze jednoznačně určit",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 203,
+		task: "Posun křivky poptávky vpravo může být vyvolán:",
+		answers: [
+			"poklesem příjmů spotřebitelů",
+			"změnou preferencí ve porspěch daného statku (při dané ceně chtějí spotřebitelé nakoupit více než dříve)",
+			"růstem ceny komplementárního zboží",
+			"poklesem ceny substitučního zboží",
+			"ničím z uvedeného"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 204,
+		task: "Posun křivky nabídky statku X vpravo může být vyvolán:",
+		answers: [
+			"růstem cen vstupů",
+			"růstem ceny statku vznikajícího současně při výrobě X",
+			"růstem ceny výrobních substitů",
+			"rozhodnutím o omezení dovozu statku X",
+			"ničím z uvedného"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 206,
+		task: "Který z následujících faktorů nezpůsobí změnu nabídky (posun nabídky) českých automobilů Škoda Superb (za jinak stejných podmínek):",
+		answers: [
+			"výše mezd",
+			"změny ve výrobní technologii",
+			"cena autmobilu Škoda Superb",
+			"cena pneumatik",
+			"cena benzínu"
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 207,
+		task: "Který z následujících faktorů nezpůsobí pokles potávky (posun doleva) českých automobilů Škoda Superb (za jinak stejných podmínek):",
+		answers: [
+			"růst ceny benzínu",
+			"pokles ceny zahraničního automobilu ve stejné cenové kategorii",
+			"růst ceny pneumatik",
+			"růst mezd v automobilkách",
+			"pokles jizdného v prostředcích hromadné dopravy"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 208,
+		task: "Je dána fixní nabídka krůtích řízků. Zvýšení ceny kuřecích řízků jako dokonálého substitutu bude mít za jinak stejných podmínek tendenci:",
+		answers: [
+			"snížit cenu krůtích řízků",
+			"zvýšit cenu krůtích řízků",
+			"posunout křivku poptávku po krůtích řízcích doleva",
+			"posunout křivku nabídky krůtích řízků doprava",
+			"neplatí žádná z nabídek"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 209,
+		task: "Zavedení maximální ceny statku X, která je nižší než rovnovážná cena, povede (za jinak stejných podmínek), v modelu poptávkově-nabídkové analýzy k:",
+		answers: [
+			"převisu poptávaného množství tohoto statku nad množstvím nabízeným",
+			"převisu nabízeného množství tohoto statku nad množstvím poptávaným",
+			'"vyčištění" trhu na vyšší úrovni nabídky i poptávky',
+			"nedostatku této komodity na trhu",
+			"platí několik možností"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 210,
+		task: "Zavedení maximální ceny statku X, která je vyšší než rovnovážná cena, povede (za jinak stejných podmínek), v modelu poptávkově-nabídkové analýzy k:",
+		answers: [
+			"převisu poptávaného množství tohoto statku nad množstvím nabízeným",
+			"převisu nabízeného množství tohoto statku nad množstvím poptávaným",
+			'"vyčištění" trhu na vyšší úrovni nabídky i poptávky',
+			"přebytku této komodity na trhu",
+			"platí několik možností"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 211,
+		task: "Když známe jednotlivé individuální poptávkové křivky, získáme tržní poptávkovou křivku jako:",
+		answers: [
+			"vertikální součet individuálních poptávkových křivek",
+			"horizontální součet individuálních poptávkových křivek",
+			"průměr individuálních poptávkových křivek",
+			"součet poptaváných množství všech spotřebitelů při různých cenách",
+			"platí několik možností"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 2101,
+		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		answers: [
+			"Ano",
+			"Ne"
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 2101,
+		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		answers: [
+			"Ano",
+			"Ne"
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 2101,
+		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		answers: [
+			"Ano",
+			"Ne"
+		],
+		correctAnswer: 0
+	},
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [
@@ -227,7 +469,7 @@ export const testTasks = [
 			"podíl nezaměstnaných a pracovní síly vynásobeny stem",
 			"podíl nezaměstnaných a součtu nezaměstnaných a zaměstnaných vynásobeny 100",
 			"podíl nezaměstnaných a ekonomicky neaktivních obyvatel vynásobeny 100",
-			"platí a,b,c současně",
+			"platí několik možností současně",
 		],
 		correctAnswer: 4
 	},
@@ -283,10 +525,10 @@ export const testTasks = [
 		taskNumber: 2506,
 		task: "Podle mechanizmu tzv. Okunova zákona je růst skutečné míry nezaměstnanosti nad přirozenou mírou nezaměstnanosti o 1 procentní hod spojen ",
 		answers: [
-			"s poklesem suktečného produktu pod potenciální produkt o více než 1%",
-			"s poklesem suktečného produktu pod potenciální produkt o méně než 1%",
-			"s poklesem suktečného produktu pod potenciální produkt přesně o 1%",
-			"s růstem suktečného produktu nad potenciální produkt o více než 1%",
+			"s poklesem skutečného produktu pod potenciální produkt o více než 1%",
+			"s poklesem skutečného produktu pod potenciální produkt o méně než 1%",
+			"s poklesem skutečného produktu pod potenciální produkt přesně o 1%",
+			"s růstem skutečného produktu nad potenciální produkt o více než 1%",
 			"žádná z nabízených možností není správná",
 		],
 		correctAnswer: 0

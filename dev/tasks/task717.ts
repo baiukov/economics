@@ -114,16 +114,6 @@ export class Task717 implements ITask {
 		console.log(this.answers, [], totalRevenues)
 	}
 
-	private checkWhile = (marginalCosts: number[]) => {
-		let result = false
-		marginalCosts.forEach((marginalCost) => {
-			if (marginalCost % 1 != 0) {
-				result = true
-			}
-		})
-		return result
-	}
-
 	public createAnswerDiv(question: boolean) {
 		const answerDiv = this.pageBuilder.createElement('div', {
 			attributes: [{ attribute: "class", value: "answer-field" }]

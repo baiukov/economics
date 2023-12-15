@@ -14,10 +14,10 @@ export class Task419 implements ITask {
 	public constructor() {
 		//a
 		let productionK1: number, productionK2: number
-		let marginalProductC: number, marginalProductK: number;
-		let quantity: number;
-		let price: number;
-		let qMaxUtility: number;
+		let marginalProductC: number, marginalProductK: number
+		let quantity: number
+		let price: number
+		let qMaxUtility: number
 		do {
 			[productionK1, productionK2] = getTotalProductCurve();
 			//a 
@@ -26,11 +26,11 @@ export class Task419 implements ITask {
 			// (c - k*Q) / p = 1 => p = c - k*Q = > Q = p-c / -k
 			price = this.getProductPrice()
 			qMaxUtility = (price - marginalProductC) / -marginalProductK
-		} while(quantity % 1 != 0 || qMaxUtility % 1 != 0 || qMaxUtility <= 0)
+		} while (quantity % 1 != 0 || qMaxUtility % 1 != 0 || qMaxUtility <= 0)
 		console.log(`TU = ${productionK1}X - ${-productionK2}X**2`, quantity, qMaxUtility)
 
 		const taskFunctionString = getRandom(0, 99) < 80 ? `Máme dánou funkci celkové užitečnosti ve tvaru TU=${productionK1}X - ${-productionK2}X<sup>2</sup>` :
-		`Máme dánou funkci mezní užitečnosti ve tvaru MU=${marginalProductC} - ${-marginalProductK}X.`
+			`Máme dánou funkci mezní užitečnosti ve tvaru MU=${marginalProductC} - ${-marginalProductK}X.`
 		const task = taskFunctionString + `Písmeno X označuje spotřebovávané množství zboží X za týden.`
 
 		this.taskString = task
@@ -71,22 +71,11 @@ export class Task419 implements ITask {
 		const [answerAQ, answerCQ] = this.answers
 		inputAQ.style.background = parseInt(inputAQ.value) == answerAQ ? Colors.green : Colors.red
 		inputCQ.style.background = inputCQ.value == answerCQ ? Colors.green : Colors.red
-		console.log(answerAQ, answerCQ)
-	}
-
-	private getCapitalPrice = () => {
-		const price: number = getRandom(50, 300)
-		return price
 	}
 
 	private getProductPrice = () => {
 		const productPrice = getRandom(1, 50)
 		return productPrice
-	}
-
-	private getCapital = () => {
-		const capital: number = getRandom(1, 10)
-		return capital
 	}
 
 

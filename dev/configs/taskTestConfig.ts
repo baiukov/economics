@@ -214,6 +214,67 @@ export const testTasks = [
 		],
 		correctAnswer: 4
 	},
+
+	{
+		taskNumber: 302,
+		task: "Je-li poptávka po botách cenově jednotkově elastická, potom:",
+		answers: [
+			"boty budou pravděpodobně levné",
+			"pokles jejich ceny povede ke vzrůstu spotřebitelských výdajů na ně",
+			"koeficient cenové elasticity poptávky po nich bude nula",
+			"jsou pravděpodobně velmi poptávané a žádané",
+			"vzrůst jejich cen nebude vůbec redukovat spotřebitelské výdaje na ně"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 305,
+		task: "Které z následujících tvrzení platí pro případ neelastické poptávky?",
+		answers: [
+			"procentní pokles ceny je menší než procentní růst objemu prodejů (prodaného množství), takže přes pokles ceny, TR roste",
+			"procentní pokles ceny je větší než procentní růst objemu prodejů (prodaného množství), takže pokles ceny vede k růstu TR ",
+			"procentní pokles ceny je menší než procentní růst objemu prodejů (prodaného množství), takže pokles ceny vede k neměnnému TR",
+			"procentní pokles ceny je větší než procentní růst objemu prodejů (prodaného množství), takže pokles ceny vede k poklesu TR",
+			"žádná z možností není správná"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 306,
+		task: "Která z uvedených poptávkových křivek bude pravděpodobně nejméně cenově elastická ? Poptávková křivka :",
+		answers: [
+			"všech automobilů střední třídy",
+			"Škody Superb",
+			"Opelů",
+			"Fabií",
+			"Fiatů"
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 307,
+		task: "Který z následujících faktorů determinuje cenovou elasticitu poptávky?",
+		answers: [
+			"množství a dostupnost substitutů daného statku",
+			"luxusnost či nezbytnost daného zboží",
+			"procento příjmu vydávané na dané zboží",
+			"délka časového období",
+			"všechny varianty jsou správné"
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 308,
+		task: "Spotřebiteli X chutná pouze pravá Plzeň a nemá rád Budvar (bolí ho z něj hlava). Spotřebitel Y není schopen mezi těmito druhy piv rozlišovat. Pravděpodobně elastičtější poptávka po pivu bude:",
+		answers: [
+			"u spotřebitele X",
+			"u spotřebitele Y",
+			"poptávka bude z hlediska elasticity u obou stejná",
+			"u spotřebitele, který piva kupuje méně",
+			"na základě zadaných informací nelze určit"
+		],
+		correctAnswer: 1
+	},
 	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",

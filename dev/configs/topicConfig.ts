@@ -4,7 +4,7 @@ export const topicNames = {
 	2: { name: "Trh a tržní mechanismus", tasks: [201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 215, 216] },
 	3: { name: "Cenová elasticita poptávky", tasks: [301, 303, 304, 311] },
 	4: { name: "Chování spotřebitele a formování poptávky", tasks: [401, 402, 403, 404, 413, 419] },
-	5: { name: "Produkční funkce v krátkém období", tasks: [] },
+	5: { name: "Produkční funkce v krátkém období", tasks: [501, 502, 503, 504, 505, 506, 507, 508] },
 	6: { name: "Náklady v krátkém období, příjmy, zisk", tasks: [] },
 	7: { name: "Dokonalá konkurence na trhu výrobků a služeb", tasks: [717, 718] },
 	8: { name: "Nedokonalá konkurence na trhu výrobků a služeb", tasks: [] },

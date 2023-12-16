@@ -40,6 +40,9 @@ import { Task304 } from './tasks/task304.js'
 import { Task311 } from './tasks/task311.js'
 import { Task413 } from './tasks/task413.js'
 import { Task419 } from './tasks/task419.js'
+import { Task506 } from './tasks/task506.js'
+import { Task507 } from './tasks/task507.js'
+import { Task508 } from './tasks/task508.js'
 import { Task717 } from './tasks/task717.js'
 import { Task718 } from './tasks/task718.js'
 import { Task911 } from './tasks/task911.js'
@@ -95,6 +98,10 @@ export class Economy {
 		this.tasks[311] = new Task311()
 
 		this.tasks[413] = new Task413()
+
+		this.tasks[506] = new Task506()
+		this.tasks[507] = new Task507()
+		this.tasks[508] = new Task508()
 
 		this.tasks[911] = new Task911()
 		this.tasks[912] = new Task912()

@@ -309,7 +309,7 @@ export const testTasks = [
 			"více pomerančů, takže jeho mezní užitek klesne",
 			"neplatí žádná varianta"
 		],
-		correctAnswer: 1
+		correctAnswer: 3
 	},
 	{
 		taskNumber: 404,
@@ -323,30 +323,66 @@ export const testTasks = [
 		],
 		correctAnswer: 0
 	},
-	// {
-	// 	taskNumber: 308,
-	// 	task: "Spotřebiteli X chutná pouze pravá Plzeň a nemá rád Budvar (bolí ho z něj hlava). Spotřebitel Y není schopen mezi těmito druhy piv rozlišovat. Pravděpodobně elastičtější poptávka po pivu bude:",
-	// 	answers: [
-	// 		"u spotřebitele X",
-	// 		"u spotřebitele Y",
-	// 		"poptávka bude z hlediska elasticity u obou stejná",
-	// 		"u spotřebitele, který piva kupuje méně",
-	// 		"na základě zadaných informací nelze určit"
-	// 	],
-	// 	correctAnswer: 1
-	// },
-	// {
-	// 	taskNumber: 308,
-	// 	task: "Spotřebiteli X chutná pouze pravá Plzeň a nemá rád Budvar (bolí ho z něj hlava). Spotřebitel Y není schopen mezi těmito druhy piv rozlišovat. Pravděpodobně elastičtější poptávka po pivu bude:",
-	// 	answers: [
-	// 		"u spotřebitele X",
-	// 		"u spotřebitele Y",
-	// 		"poptávka bude z hlediska elasticity u obou stejná",
-	// 		"u spotřebitele, který piva kupuje méně",
-	// 		"na základě zadaných informací nelze určit"
-	// 	],
-	// 	correctAnswer: 1
-	// },
+	{
+		taskNumber: 501,
+		task: "Krátké období je období, ve kterém ",
+		answers: [
+			"firma může rozšiřovat pouze výrobní kapacity ",
+			"firma nemůže rozšiřovat výrobní kapacity, ale může měnit množství práce ",
+			"firma může zvyšovat pouze množství kapitálových statků",
+			"jsou všechny vstupy proměnlivé",
+			"jsou všechny vstupy konstantní"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 502,
+		task: "V případě klesajících výnosů z variabilního vstupu neplatí: ",
+		answers: [
+			"celkový produkt roste s klesajícími přírůstky",
+			"mezní produkt klesá",
+			"celkový produkt roste stále pomaleji",
+			"celkový produkt roste konvexně, tj. s rostoucími přírůstky",
+			"celkový produkt roste konkávně"
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 503,
+		task: "Mezní produkt je: ",
+		answers: [
+			"změna objemu vyrobené produkce vyvolaná změnou množství vstupu o jednotku",
+			"objem produkce, který připadá na jednotku vstupu ",
+			"objem produkce, který připadá na jednotku výstupu ",
+			"celkový objem produkce vyrobený jednotkou vstupu",
+			"objem produkce vyrobený určitým množstvím vstupu v ideálních podmínkách dokonale konkurenčních trhů "
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 504,
+		task: "Které z níže uvedených tvrzení je správné?",
+		answers: [
+			"křivka mezního produktu (MP) nejprve klesá, protože celkový produkt (TP) roste rychleji než množství používaného vstupu",
+			"křivka MP nejprve roste, protože celkový produkt roste rychleji než množství používaného vstupu",
+			"křivka MP nejprve klesá, protože celkový produkt klesá rychleji než suma používaných vstupů",
+			"křivka MP je nejprve rovnoběžná s osou x",
+			"křivka MP je nejprve rovnoběžná s osou y"
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 505,
+		task: "Které z následujících tvrzení není správné?",
+		answers: [
+			"když je celkový produkt maximální, je mezní produkt nulový ",
+			"pokud průměrný produkt roste, mezní produkt je větší",
+			"pokud průměrný produkt klesá, mezní produkt je menší",
+			"mezní produkt protíná průměrný produkt v minimu",
+			"pokud celkový produkt klesá, mezní produkt je záporný "
+		],
+		correctAnswer: 3
+	},
 	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",

@@ -384,31 +384,100 @@ export const testTasks = [
 		correctAnswer: 3
 	},
 	{
-		taskNumber: 2101,
-		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		taskNumber: 602,
+		task: "Průměrné fixní náklady mohou být graficky znázorněny jako vzdálenost mezi :",
 		answers: [
-			"Ano",
-			"Ne"
+			"křivkami TC a VC ",
+			"křivkami MC a AC",
+			"osou x a křivkou TC ",
+			"křivkami AC a AVC",
+			"žádná z nabízených variant není správná",
 		],
 		correctAnswer: 0
 	},
 	{
-		taskNumber: 2101,
-		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		taskNumber: 603,
+		task: "Které z následujících tvrzení není správné",
 		answers: [
-			"Ano",
-			"Ne"
+			"křivka MC protíná křivku AVC v jejím minimu ",
+			"křivka MC protíná křivku AC v jejím minimu",
+			"při objemu výroby menším než odpovídá minimu křivky AC leží křivka MC pod křivkou AC, která musí klesat ",
+			"při větším objemu produkce než odpovídá minimu křivky AVC se MC nachází nad křivkou AVC, která musí stoupat",
+			"křivka MC protíná křivku AFC v jejím minimu",
 		],
-		correctAnswer: 0
+		correctAnswer: 4
 	},
 	{
-		taskNumber: 2101,
-		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
+		taskNumber: 604,
+		task: "Čistý ekonomický zisk lze vyjádřit jako: ",
 		answers: [
-			"Ano",
-			"Ne"
+			"účetní zisk + implicitní náklady",
+			"účetní zisk - implicitní náklady ",
+			"účetní zisk - explicitní náklady",
+			"účetní zisk + explicitní náklady",
+			"platí varianty několik možností současně",
 		],
-		correctAnswer: 0
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 605,
+		task: "Normální zisk je kvantitativně roven :",
+		answers: [
+			"implicitním nákladům",
+			"explicitním nákladům",
+			"čistému ekonomickému zisku",
+			"celkovým nákladům",
+			"celkovým příjmům",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 606,
+		task: "Explicitní náklady představují:",
+		answers: [
+			"náklady, které nelze evidovat v účetních knihách",
+			"alternativní náklady vstupů ve vlastnictví majitele",
+			"náklady, které firma reálně nehradí ",
+			"náklady na nákup nebo nájem výrobních faktorů v peněžní podobě",
+			"žádná z variant není správná",
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 607,
+		task: "Účetní (podnikatelský) zisk můžeme vyjádřit jako : ",
+		answers: [
+			"TR - implicitní náklady",
+			"TR - explicitní náklady",
+			"čistý ekonomický zisk + explicitní náklady",
+			"TR + explicitní náklady",
+			"TR + implicitní náklady",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 608,
+		task: "Pokud nějaká firma realizuje pouze normální zisk, můžeme říci, že velikost jejího čistého ekonomického zisku je:",
+		answers: [
+			"větší než nula",
+			"nula",
+			"menší než nula",
+			"vždy přesně 200 Kč na jednotku (stanoveno vyhláškou)",
+			"větší než v případě, kdyby na tomto trhu existovala dokonalá konkurence",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 609,
+		task: "Hodnota implicitních nákladů se rovná:",
+		answers: [
+			"tomu, co musí být zaplaceno za nákup vstupů",
+			"nule, protože implicitní náklady se neplatí",
+			"nákladům, které musel vlastník firmy vynaložit na získání všech zdrojů",
+			"tomu, co by vstupy přinesly svým fungováním při jiném nejlepším použití",
+			"platí několik možností současně",
+		],
+		correctAnswer: 3
 	},
 	{
 		taskNumber: 2101,

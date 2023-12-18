@@ -636,6 +636,54 @@ export const testTasks = [
 		correctAnswer: 3
 	},
 	{
+		taskNumber: 801,
+		task: "Která z následujících okolností může způsobit vznik nedokonalé konkurence?",
+		answers: [
+			"rozdíly v kvalitě produktů",
+			"právní překážky vstupu do odvětví",
+			"rozdílné informace výrobců a spotřebitelů",
+			"dlouhodobé průměrné náklady firmy začínají růst až za křivkou tržní poptávky",
+			"všechny",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 803,
+		task: "Předpokládáme lineární poptávku. Který z výroků o vztahu mezi MR, celkovými příjmy a elasticitou poptávky je správný? Když MR je:",
+		answers: [
+			"negativní, celkové příjmy s poklesem ceny klesají a poptávka musí být neelastická",
+			"nulový, celkové příjmy jsou maximální a poptávka musí být neelastická",
+			"pozitivní, celkové příjmy s poklesem ceny rostou a poptávka musí být neelastická",
+			"negativní, celkové příjmy s poklesem ceny klesají a poptávka musí být jednotkově elastická",
+			"pozitivní, celkové příjmy s poklesem ceny rostou a poptávka musí být dokonale elastická",
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 804,
+		task: "Vztah mezi cenovou elasticitou poptávky a monopolní silou firmy lze charakterizovat takto:",
+		answers: [
+			"čím elastičtější poptávka, tím vyšší monopolní síla",
+			"čím elastičtější poptávka, tím menší monopolní síla",
+			"čím elastičtější nabídka, tím vyšší monopolní síla",
+			"čím elastičtější nabídka, tím nižší monopolní síla",
+			"stupeň monopolní síly nesouvisí s elasticitou nabídky ani poptávky",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 805,
+		task: "Pro rovnovážnou úroveň výstupu nedokonale konkurenční firmy, která maximalizuje zisk, platí:",
+		answers: [
+			"MC musí být větší než P",
+			"MC = P",
+			"MC jsou menší než P",
+			"součet MC a MR musí být roven P",
+			"žádná z nabídek není správná",
+		],
+		correctAnswer: 2
+	},
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [

@@ -7,7 +7,7 @@ export const topicNames = {
 	5: { name: "Produkční funkce v krátkém období", tasks: [501, 502, 503, 504, 505, 506, 507, 508] },
 	6: { name: "Náklady v krátkém období, příjmy, zisk", tasks: [601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612] },
 	7: { name: "Dokonalá konkurence na trhu výrobků a služeb", tasks: [701, 702, 703, 704, 705, 706, 707, 708, 710, 711, 712, 713, 714, 715, 717, 718] },
-	8: { name: "Nedokonalá konkurence na trhu výrobků a služeb", tasks: [] },
+	8: { name: "Nedokonalá konkurence na trhu výrobků a služeb", tasks: [801, 802, 803, 804, 805] },
 	9: { name: "Monopol", tasks: [911, 912, 913, 914, 916, 918] }, //901
 	10: { name: "Monopolistic competition", tasks: [1006] },
 	11: { name: "Oligopol", tasks: [] },

@@ -43,7 +43,6 @@ export class Task508 implements ITask {
 			labour1 = getRandom(5, 2)
 			tpWithL1 = productK1 * labour1 + productK2 * Math.pow(labour1, 2) + productK3 * Math.pow(labour1, 3)
 			answers.push(tpWithL1)
-			console.log(tpWithL1)
 
 			labour2 = getRandom(5, 2)
 			mpWithL2 = marginalProductC + marginalProductK1 * labour2 + marginalProductK2 * Math.pow(marginalProductK2, 2)
@@ -154,7 +153,6 @@ export class Task508 implements ITask {
 		const Q = `${pK1}L ${getZStr(pK2)}L2 ${getZStr(pK3)}L3`
 		const MP = `${mpC} ${getZStr(mpK1)}L ${getZStr(mpK2)}L2`
 		const AP = `${apC} ${getZStr(apK1)}L ${getZStr(apK2)}L2`
-		console.log(eL, eQ)
 
 		const inputQ = document.getElementById(`task-${this.taskNumber}-answer-Q`) as HTMLInputElement
 		const inputMP = document.getElementById(`task-${this.taskNumber}-answer-MP`) as HTMLInputElement

@@ -13,7 +13,6 @@ export class Task717 implements ITask {
 	private pageBuilder: PageBuilder = PageBuilder.getPageBuilder();
 
 	public constructor() {
-
 		const productPrice = this.getProductPrice()
 		let labourPrice: number = 0
 		const capitalAmount = this.getCapital()
@@ -34,7 +33,6 @@ export class Task717 implements ITask {
 				marginalCosts.push(Infinity)
 				totalCosts.push(capitalAmount * capitalPrice)
 			} else {
-				console.log(l)
 				let marginalCost
 				let quantity = 0
 				do {
@@ -111,7 +109,6 @@ export class Task717 implements ITask {
 		for (let i = 0; i < 6; i++) {
 			totalRevenues.push(totalProductions[i] * 2)
 		}
-		console.log(this.answers, [], totalRevenues)
 	}
 
 	public createAnswerDiv(question: boolean) {

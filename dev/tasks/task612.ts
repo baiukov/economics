@@ -77,7 +77,6 @@ export class Task612 implements ITask {
 
 			acE1 = acK1 / qE1 + acC + acK2 * qE1 + acK3 * Math.pow(qE1, 2)
 			acE2 = acK1 / qE2 + acC + acK2 * qE2 + acK3 * Math.pow(qE2, 2)
-			console.log(acE1, acE2)
 			isValid = isValid && check(acE1)
 			isValid = isValid && check(acE2)
 		} while (!isValid)

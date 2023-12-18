@@ -480,6 +480,162 @@ export const testTasks = [
 		correctAnswer: 3
 	},
 	{
+		taskNumber: 701,
+		task: "Co z následujícího by se mohlo stát, jestliže firma v dokonalé konkurenci v dlouhém období sníží své ceny pod cenu tržní rovnováhy ?",
+		answers: [
+			"všechny ostatní firmy by snížily své ceny",
+			"firma by byla ztrátová",
+			"ostatní firmy by byly vyřazeny z činnosti ",
+			"ostatní firmy by mohly vstoupit do tohoto odvětví",
+			"firma by získala větší podíl na trhu a to by pro ni bylo výhodné",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 702,
+		task: "V bodě vyrovnání nákladů s výnosy platí : ",
+		answers: [
+			"P = AVC",
+			"P = AR = MR = AVC",
+			"P = MC = AC",
+			"P > MC",
+			"AVC = MC",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 703,
+		task: "Podmínku optima firmy na dokonale konkurenčním trhu můžeme nejpřesněji vyjádřit vztahem :",
+		answers: [
+			"MC = MR = TC = AR = P",
+			"MC = MR = AR = P",
+			"MC = MR = AFC = AR",
+			"MC = AVC = TR = P",
+			"nic uvedeného neplatí",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 704,
+		task: "Předpokládejte, že dokonale konkurenční odvětví je tvořeno čtyřmi firmami s následujícími mezními náklady: MC = 0,3 Q + 3. Jaká bude tržní nabídka tohoto odvětví ?",
+		answers: [
+			"Q = 12P + 36",
+			"Q = 12P - 36",
+			"Q = P - 36",
+			"P = 1/12 Q + 3",
+			"platí několik možností současně",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 705,
+		task: "Jestliže ceny v dokonale konkurenčním odvětví klesají, pak firmy tohoto odvětví v krátkém období budou",
+		answers: [
+			"snižovat MC až na jejich minimální úroveň",
+			"zvyšovat objem výroby",
+			"stavět nové kapacity",
+			"poptávat méně zdrojů a nabízet méně výrobků",
+			"nic z uvedeného nemůže nastat",
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 706,
+		task: "Jestliže cena, za kterou se prodávají výrobky dokonale konkurečního odvětví, je vyšší než dlouhodobé minimum AC, potom:",
+		answers: [
+			"firmy budou zvyšovat MC až na úroveň AVC ",
+			"cena bude automaticky klesat, takže spotřebitelé budou nakupovat výhodněji",
+			"existující firmy monopolizují trh",
+			"firmy opustí odvětví",
+			"do odvětví budou vstupovat nové firmy",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 707,
+		task: "Firmě se někdy vyplatí vyrábět s krátkodobou ztrátou, pokud cena kryje alespoň:",
+		answers: [
+			"AC",
+			"AFC",
+			"MFC",
+			"AVC",
+			"nic z uvedeného neplatí ",
+		],
+		correctAnswer: 3
+	},
+	{
+		taskNumber: 709,
+		task: "Dokonale konkurenční firma prodává svou produkci za tržní cenu 5 Kč za jednotku. Na současné úrovni výstupu a prodejů se AC rovnají 4 Kč. Tato firma :",
+		answers: [
+			"by mohla zvýšit zisk zvýšením výstupu",
+			"by mohla zvýšit zisk snížením výstupu",
+			"vytváří zisk, ale poskytnuté informace jsou nedostačující pro určení, zda změnou objemu výstupu by mohl být zisk zvýšen",
+			"nevytváří žádný zisk a měla by činnost ukončit",
+			"nevytváří žádný zisk, ale je na tom lépe, než v případě ukončení činnosti ",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 710,
+		task: "Dokonalá konkurence je charakterizována těmito základními vlastnostmi:",
+		answers: [
+			"existence mnoha malých firem, homogennost produkce, volný vstup do odvětví ",
+			"existence mála firem, homogennost produkce, částečné bariéry při vstupu do odvětví",
+			"existence jedné firmy, specifičnost produkce, vstup do odvětví uzavřen",
+			"existence mála firem, diferencovanost produktu, snadný vstup do odvětví",
+			"existence jedné firmy při relativně snadném vstupu do odvětví",
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 711,
+		task: "Křivka nabídky firmy v podmínkách dokonalé konkurence je totožná: ",
+		answers: [
+			"s klesající částí křivky mezních nákladů",
+			"s rostoucí částí křivky mezních nákladů od min.AVC",
+			"s klesající částí křivky mezních příjmů",
+			"s rostoucí částí křivky mezních příjmů",
+			"s rostoucí částí křivky průměrných nákladů",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 712,
+		task: "Bod uzavření firmy je bod, pro který platí :",
+		answers: [
+			"AVC = MC < P",
+			"AVC > MC > P",
+			"AVC = MC = P",
+			"AVC < MC < P",
+			"AVC < MC > P",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 713,
+		task: "V dlouhém období firma vždy ukončí činnost v odvětví, jestliže:",
+		answers: [
+			"cena nekryje alespoň průměrné náklady",
+			"cena se nerovná mezním nákladům",
+			"cena je vyšší než průměrné variabilní náklady",
+			"cena se nerovná alespoň minimu křivky mezních nákladů",
+			"ostatní firmy v oboru jsou méně efektivní",
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 716,
+		task: "V krátkém období dokonale konkurenční firma může dosahovat:",
+		answers: [
+			"pouze normálního zisku",
+			"pouze kladného čistého ekonomického zisku",
+			"pouze nulového ekonomického zisku",
+			"zisku, nulového zisku nebo ztráty",
+			"platí několik možností současně",
+		],
+		correctAnswer: 3
+	},
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [

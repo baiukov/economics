@@ -21,7 +21,6 @@ export class Task205 implements ITask {
 			price = demandC + demandK * quantity
 		} while (quantity % 1 != 0 || quantity <= 0 || price <= 0)
 
-		console.log(quantity, price)
 		const isDkNegative = demandK < 0
 		const isSkNegative = supplyK < 0
 		this.taskString = `

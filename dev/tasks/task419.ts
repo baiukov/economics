@@ -27,7 +27,6 @@ export class Task419 implements ITask {
 			price = this.getProductPrice()
 			qMaxUtility = (price - marginalProductC) / -marginalProductK
 		} while (quantity % 1 != 0 || qMaxUtility % 1 != 0 || qMaxUtility <= 0)
-		console.log(`TU = ${productionK1}X - ${-productionK2}X**2`, quantity, qMaxUtility)
 
 		const taskFunctionString = getRandom(0, 99) < 80 ? `Máme dánou funkci celkové užitečnosti ve tvaru TU=${productionK1}X - ${-productionK2}X<sup>2</sup>` :
 			`Máme dánou funkci mezní užitečnosti ve tvaru MU=${marginalProductC} - ${-marginalProductK}X.`

@@ -33,8 +33,6 @@ export class Task2211 implements ITask {
 		}
 		while (GDP % 1 != 0 || GDP <= 0 || newGDP % 1 != 0)
 
-		console.log(deltaGDP, newGDP)
-
 		this.taskString = `
 		Dvousektorová ekonomika je charakterizována spotřební fuknci C = ${autonomicCost} + ${disposableCostsC}Y<sub>D</sub> a hrubými planovanými investicemi ${grossPlannedInvestice}. Zjistěte
 		`

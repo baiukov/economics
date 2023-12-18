@@ -18,9 +18,7 @@ export class Task2111 implements ITask {
 		const [taskString, GDP, I, NDP, toFind] = this.getIncomeMetod()
 		this.task = taskString as string
 		this.answer = [GDP as string, I as string, NDP as string]
-		console.log(this.answer)
 		this.taskHTML = this.createAnswerHTML(toFind as string) as HTMLDivElement
-		console.log(this.task, GDP)
 	}
 
 	private getIncomeMetod = () => {

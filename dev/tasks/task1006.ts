@@ -26,7 +26,6 @@ export class Task1006 implements ITask {
 			pcQ = (demandC / (-demandK + marginalCostsK))
 		} while (optimalQ % 1 != 0 || pcQ % 1 != 0)
 		pcC = demandC + demandK * pcQ
-		console.log("PCQ", pcQ)
 		const demandString: string = `P = ${demandC} - ${-demandK}Q`
 		const averageCostsString: string = `AC = ${averageCostsK}Q`
 

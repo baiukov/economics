@@ -21,7 +21,6 @@ export class Task216 implements ITask {
 			quantity = getRandom(100, 10)
 			price = demandC + (demandK * quantity)
 		} while (price % 1 != 0 || price <= 0 || quantity % 4 !== 0 || price % 4 !== 0)
-		console.log(quantity, price)
 		const place = getRandom(3, 0)
 
 		const quantities = []

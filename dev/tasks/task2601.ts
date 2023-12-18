@@ -15,7 +15,6 @@ export class Task2601 implements ITask {
 			"Deflace": 3,
 		}
 		const inflationNames = Object.keys(inflationTypes)
-		console.log(inflationNames.length - 1)
 		const inflationType = inflationNames[getRandom(inflationNames.length - 1, 0)]
 
 		const answers = [

@@ -62,11 +62,8 @@ export class Task2310 implements ITask {
 		const correctB = [answerB1, answerB2, answerB3]
 		inputA.style.background = inputA.value.toLowerCase() == answerA ? Colors.green : Colors.red
 		inputB1.style.background = correctB.includes(inputB1.value.toLowerCase()) ? Colors.green : Colors.red
-		console.log(correctB, correctB.includes(inputB1.value))
 		correctB[correctB.indexOf(inputB1.value.toLowerCase())] = getRandom(0, 1000).toString()
-		console.log(correctB)
 		inputB2.style.background = correctB.includes(inputB2.value.toLowerCase()) ? Colors.green : Colors.red
-		console.log(correctB, inputB2.value, correctB.includes(inputB2.value))
 		correctB[correctB.indexOf(inputB2.value.toLowerCase())] = getRandom(0, 1000).toString()
 		inputB3.style.background = correctB.includes(inputB3.value.toLowerCase()) ? Colors.green : Colors.red
 	}

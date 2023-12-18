@@ -70,7 +70,6 @@ export class Task2613 implements ITask {
 		`
 		this.taskAnswer = this.createAnswerHTML()
 		this.answers = [cpi.toFixed(2), inflation.toFixed(2)]
-		console.log(this.answers)
 	}
 
 	private createAnswerHTML = () => {

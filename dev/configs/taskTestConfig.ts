@@ -779,6 +779,66 @@ export const testTasks = [
 		],
 		correctAnswer: 1
 	},
+	{
+		taskNumber: 1101,
+		task: "Oligopol jako jedna z forem nedokonalé konkurence je charakterizován :",
+		answers: [
+			"množstvím malých firem, homogenností produktu, snadným vstupem na trh",
+			"množstvím malých firem, diferencovaností produktu, snadným vstupem do odvětví",
+			"existencí několika málo firem, diferencovaností nebo homogenitou produkce, částečnou bariérou vstupu",
+			"existencí jedné firmy, specifickým produktem, uzavřeností vstupu do odvětví",
+			"žádná varianta není správná",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 1102,
+		task: "V případě oligopolu jsou bariéry vstupu do odvětví:",
+		answers: [
+			"nulové (vstup je tedy zcela volný) ",
+			"nepřekonatelné (vstup je tedy zcela uzavřený)",
+			"bariéry sice existují, ale vstup není zcela vyloučený",
+			"menší než v situaci monopolní konkurence",
+			"stejné jako v situaci dokonalé konkurence",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 1103,
+		task: "Uvažujeme situaci oligopolního odvětví s dominantní firmou. Co se stane s tržním podílem této firmy v případě růstu ceny produkce za jinak stejných podmínek?",
+		answers: [
+			"klesne",
+			"vzroste",
+			"nezmění se",
+			"dominantní firma vytlačí 'konkurenční lem'",
+			"nelze jednoznačně určit",
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 1104,
+		task: "Může nastat případ, že dominantní firma je ztrátová ?",
+		answers: [
+			"ano, ale pouze v krátkém období ",
+			"ne",
+			"dominantní firma vždy realizuje pouze normální zisk",
+			"ztrátová může být pouze v dlouhém období ",
+			"nelze jednoznačně rozhodnout",
+		],
+		correctAnswer: 0
+	},
+	{
+		taskNumber: 1105,
+		task: "O křivce poptávky po produkci dominantní firmy a křivce tržní poptávky platí, že: ",
+		answers: [
+			"jsou rovnoběžné",
+			"jsou totožné",
+			"tržní poptávka je více elastická",
+			"tržní poptávka je méně elastická",
+			"jsou rovnoběžné do ceny stanovené dominantní firmou, při nižší ceně jsou identické",
+		],
+		correctAnswer: 3
+	},
 
 	{
 		taskNumber: 2101,

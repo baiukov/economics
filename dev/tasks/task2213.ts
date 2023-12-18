@@ -35,7 +35,6 @@ export class Task2213 implements ITask {
 		this.taskString = `
 			Třísektorová ekonomika je charakterizována následovně: sazba důchodové daně ${(t * 100).toFixed()}%, mezní sklon k${isMPC ? "e spotřebě" : " úsporám"} ${isMPC ? c : s}, autonomní spotřeba domacností ${Ca}, transfery ${TR}, plánované investice ${Ip}, vládní investice ${G}, autonomní daně ${TA}. Určete:
 		`
-		console.log(multiplicator, balancedGDP, Yd, C)
 
 		this.answers = [multiplicator, balancedGDP, Yd, C]
 		this.taskAnswer = this.createAnswerHTML() as HTMLDivElement

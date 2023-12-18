@@ -12,7 +12,6 @@ export class Task2314 implements ITask {
 
 	public constructor() {
 
-		const isInCorrect = getRandom(99, 0) < 30
 
 		const rezerves = getRandom(100, 10)
 		const deposits = getRandom(500, 100)
@@ -23,8 +22,6 @@ export class Task2314 implements ITask {
 		const m2 = m1 + timeDeposits
 		const m3 = m2 + stock
 
-		console.log(isInCorrect)
-		const correctAnswer = isInCorrect ? 5 : 0
 
 		this.taskString = `
 			Bankovní rezervy ekonomiky činí celkem ${rezerves} mld. Veškeré peněžní zůstatky mají podobu bankvních vkladů. Vklady na běžných účtech činí celkem ${deposits} mld. Termínované vklady činí celkem ${timeDeposits} mld. Cenné papíry v rukou domácích subjektů jsou odhadovány na ${stock} mld. Vypočítejte peněžní agregatory: 

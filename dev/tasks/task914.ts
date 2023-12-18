@@ -21,7 +21,7 @@ export class Task914 implements ITask {
 		const answer = price2 * secondQ - price1 * firstQ
 		this.taskString = `
 		Monopolista se snaží maximalizovat svůj celkový zisk. Může prodat ${firstQ} jednotek produkce 
-		po ${price1} EUR nebo ${secondQ} jednotek po ${price2} EUR. Vypočtěte mezní příjem jedenácté prodané jednotky.`
+		po ${price1} EUR nebo ${secondQ} jednotek po ${price2} EUR. Vypočtěte mezní příjem ${secondQ}-é prodané jednotky.`
 		this.answerHTML = this.createAnswerDiv() as HTMLDivElement
 		this.answers = [answer.toFixed(1)]
 	}

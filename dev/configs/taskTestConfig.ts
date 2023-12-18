@@ -684,6 +684,54 @@ export const testTasks = [
 		correctAnswer: 2
 	},
 	{
+		taskNumber: 902,
+		task: "Politika zaměřená na regulaci nedokonalých konkurentů by měla:",
+		answers: [
+			"udržovat nízké bariéry konkurence",
+			"tolerovat velké firmy, pokud vznikly přirozeně a jsou technologicky výhodné",
+			"postihovat antikonkurenční a nekalé praktiky",
+			"podporovat výzkum a rozvoj malých firem",
+			"zahrnovat vše výše uvedené",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 903,
+		task: "Jedna z uvedených charakteristik monopolu není pravdivá - označte ji:",
+		answers: [
+			"monopol prodává své zboží za ceny vyšší než by byly za jinak stejných podmínek na dokonale konkurenčním trhu ",
+			"monopol zpravidla nevyrábí s nejnižšími výrobními náklady",
+			"monopol vyrábí menší množství produkce než by bylo za jinak stejných podmínek vyrobeno na dokonale konkurenčním trhu",
+			"průměrné náklady monopolu jsou většinou nižší než průměrné příjmy",
+			"s rostoucím množstvím vyrobené produkce mezní příjem vždy stoupá nebo je alespoň konstantní",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 904,
+		task: "Může monopol vždy stanovit libovolně vysokou cenu?",
+		answers: [
+			"ano, vždy",
+			"ano, ale jen při neexistenci zahraniční konkurence",
+			"ano, ale pouze v případě homogenního produktu",
+			"ano, ale pouze při neexistenci státních zásahů",
+			"ne, musí vždy zohledňovat poptávku a potenciální konkurenty (např. zahraniční)",
+		],
+		correctAnswer: 4
+	},
+	{
+		taskNumber: 905,
+		task: "Pokud monopol maximalizuje obrat (tržby), prodává takové Q, při kterém:",
+		answers: [
+			"MR > 1",
+			"MR < -1",
+			"MR = 0",
+			"MR > 0",
+			"MR < 0",
+		],
+		correctAnswer: 2
+	},
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [

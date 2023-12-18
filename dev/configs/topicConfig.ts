@@ -9,7 +9,7 @@ export const topicNames = {
 	7: { name: "Dokonalá konkurence na trhu výrobků a služeb", tasks: [701, 702, 703, 704, 705, 706, 707, 708, 710, 711, 712, 713, 714, 715, 717, 718] },
 	8: { name: "Nedokonalá konkurence na trhu výrobků a služeb", tasks: [801, 802, 803, 804, 805] },
 	9: { name: "Monopol", tasks: [911, 902, 903, 904, 905, 912, 913, 914, 916, 918] }, //901
-	10: { name: "Monopolistic competition", tasks: [1006] },
+	10: { name: "Monopolistic competition", tasks: [1001, 1002, 1003, 1004, 1006] },
 	11: { name: "Oligopol", tasks: [] },
 
 	20: { name: "<h2>Makroeconomy</h2>", tasks: [] },

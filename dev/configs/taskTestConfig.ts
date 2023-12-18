@@ -732,6 +732,55 @@ export const testTasks = [
 		correctAnswer: 2
 	},
 	{
+		taskNumber: 1001,
+		task: "Dlouhodobé optimum firmy v monopolisticky konkurenčním odvětví se ustálí v bodě, kde",
+		answers: [
+			"křivka MC protíná křivku poptávky",
+			"křivka tržní poptávky je tečnou křivky AC",
+			"křivka individuální poptávky je tečnou křivky AC",
+			"minimum křivky AC protíná křivku MR",
+			"křivka individuální poptávky je tečnou křivky MC",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 1002,
+		task: "Důležitým znakem monopolistické konkurence je, že dlouhodobý rovnovážný výstup firmy se nachází na úrovni výstupu:",
+		answers: [
+			"na kterém cena převyšuje AC",
+			"nižším než výstup, při němž jsou AC minimální",
+			"nižším než výstup, při němž MC = MR",
+			"nižším než výstup, při němž AC = AR",
+			"nic z uvedeného neplatí",
+		],
+		correctAnswer: 1
+	},
+	{
+		taskNumber: 1003,
+		task: "Firma v monopolistické konkurenci může v krátkém období realizovat čistý ekonomický zisk, který je:",
+		answers: [
+			"pouze kladný",
+			"pouze záporný",
+			"kladný, nulový nebo záporný",
+			"pouze nulový (normální zisk)",
+			"tento typ zisku v monopolní konkurenci neexistuje",
+		],
+		correctAnswer: 2
+	},
+	{
+		taskNumber: 1004,
+		task: "Jak se změní poptávková křivka po produkci jedné monopolně konkurenční firmy v dlouhém období, pokud do daného odvětví vstupují další firmy?",
+		answers: [
+			"posune se doprava nahoru",
+			"posune se doleva dolů a stane se pravděpodobně více elastickou",
+			"posune se doleva dolů a stane se pravděpodobně méně elastickou",
+			"nezmění se",
+			"splyne s křivkou tržní poptávky",
+		],
+		correctAnswer: 1
+	},
+
+	{
 		taskNumber: 2101,
 		task: "HDP je hodnota nové produkce finálních statků, vyrobných a prodaných za sledované období na území daného státu, a tato hodnota je vyjádřena v tržních cenách, tedy mj. obsahuje i daň z přidané (DPH)",
 		answers: [

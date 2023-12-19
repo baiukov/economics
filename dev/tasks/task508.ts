@@ -29,7 +29,6 @@ export class Task508 implements ITask {
 			do { productK3 = getRandom(15, -15) } while (productK1 === 0)
 			additionalAnswers.push(productK1, productK2, productK3)
 
-
 			marginalProductC = productK1
 			marginalProductK1 = productK2 * 2
 			marginalProductK2 = productK3 * 3
@@ -45,7 +44,7 @@ export class Task508 implements ITask {
 			answers.push(tpWithL1)
 
 			labour2 = getRandom(5, 2)
-			mpWithL2 = marginalProductC + marginalProductK1 * labour2 + marginalProductK2 * Math.pow(marginalProductK2, 2)
+			mpWithL2 = marginalProductC + marginalProductK1 * labour2 + marginalProductK2 * Math.pow(labour2, 2)
 			answers.push(mpWithL2)
 
 

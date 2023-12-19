@@ -82,7 +82,7 @@ export class Task2213 implements ITask {
 		inputdY.style.background = inputdY.value == dY.toFixed(2) ? Colors.green : Colors.red
 		inputY.style.background = inputY.value == Y.toString() ? Colors.green : Colors.red
 		inputYD.style.background = inputYD.value == YD.toString() ? Colors.green : Colors.red
-		inputC.style.background = inputC.value == C.toString() ? Colors.green : Colors.red
+		inputC.style.background = inputC.value == C.toFixed(2) ? Colors.green : Colors.red
 	}
 
 

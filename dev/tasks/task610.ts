@@ -15,7 +15,7 @@ export class Task610 implements ITask {
 
 		this.taskString = `
 		Jestliže fixní náklady jsou ${fixedCosts} Kč, AVC pak ${averageCosts} Kč při produkci ${quantity} kusů, MC na
-		výrobu jedenácté jednotky budou: 
+		výrobu ${quantity + 1}-é jednotky budou: 
 		`
 		const answers = ["nelze přesně určit"]
 		for (let i = 0; i < 4; i++) {

@@ -357,7 +357,7 @@ export const testTasks = [
 			"celkový objem produkce vyrobený jednotkou vstupu",
 			"objem produkce vyrobený určitým množstvím vstupu v ideálních podmínkách dokonale konkurenčních trhů "
 		],
-		correctAnswer: 1
+		correctAnswer: 0
 	},
 	{
 		taskNumber: 504,
@@ -429,7 +429,7 @@ export const testTasks = [
 			"celkovým nákladům",
 			"celkovým příjmům",
 		],
-		correctAnswer: 4
+		correctAnswer: 0
 	},
 	{
 		taskNumber: 606,
